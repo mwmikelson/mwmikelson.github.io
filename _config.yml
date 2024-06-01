@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Maya Mikelson"
 title_separator          : "-"
 name                     : &name "Your Name"
-description              : &description "personal description"
+description              : &description "Political Science student at the University of Michigan-Ann Arbor"
 url                      : https://mwmikelson.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "mwmikelson/mwmikelson.github.io"
@@ -22,13 +22,13 @@ repository               : "mwmikelson/mwmikelson.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
+  name             : "Maya Mikelson"
+  pronouns         : # example: "she/her"
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
-  employer         : "Red Brick University"
+  employer         : "University of Michigan"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "mikelson@umich.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
