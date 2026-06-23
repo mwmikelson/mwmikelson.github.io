@@ -42,7 +42,7 @@ cv:
         studyType: B.S.
         start_date: 2021
         end_date: 2025
-        score: #GPA: 3.64 (3.97 in Political Science)#
+        score: "GPA: 3.64 (3.97 in Political Science)"
 
     Research Experience:
       - company: Inter-university Consortium for Political and Social Research
