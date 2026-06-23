@@ -1,6 +1,6 @@
 ---
 layout: course
-title: PS 3: Introduction to Empirical Analysis and Quantitative Methods
+title: "PS 3: Introduction to Empirical Analysis and Quantitative Methods"
 description: This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.
 instructor: Prof. David Broockman
 role: Graduate Student Instructor
