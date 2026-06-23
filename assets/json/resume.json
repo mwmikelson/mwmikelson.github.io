@@ -141,6 +141,7 @@
   "skills": [
     {
       "name": "Programming",
+      "icon": "fa-solid fa-code",
       "keywords": [
         "R",
         "Stata",
@@ -151,6 +152,7 @@
     },
     {
       "name": "Quantitative Methods",
+      "icon": "fa-solid fa-chart-line",
       "keywords": [
         "OLS/Multivariate/Logit/Probit Regression Modeling",
         "Latent variable modeling",
