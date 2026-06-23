@@ -3,10 +3,9 @@
     "name": "Maya Mikelson",
     "label": "Ph.D. Student",
     "email": "mikelson@berkeley.edu",
-    "phone": "512-423-4989",
     "url": "https://www.linkedin.com/in/mayamikelson/",
-    "Research Interests": "Conflict and cooperation, security studies, militarization, international interventions, human rights"
   },
+  "Research Interests": ["Conflict and cooperation, security studies, militarization, international interventions, human rights"],
   "education": [
     {
       "institution": "University of California, Berkeley",
@@ -142,7 +141,6 @@
   "skills": [
     {
       "name": "Programming",
-      "level": "Proficient",
       "keywords": [
         "R",
         "Stata",
@@ -153,7 +151,6 @@
     },
     {
       "name": "Quantitative Methods",
-      "level": "Proficient",
       "keywords": [
         "OLS/Multivariate/Logit/Probit Regression Modeling",
         "Latent variable modeling",
