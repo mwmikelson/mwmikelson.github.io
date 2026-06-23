@@ -29,12 +29,8 @@ cv:
         area: Political Science
         studyType: PhD
         start_date: 2025
-        end_date: 
+        end_date: Present
         score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
 
       - institution: University of Michigan - Ann Arbor
         location: Ann Arbor, MI
@@ -43,9 +39,6 @@ cv:
         start_date: 2021
         end_date: 2025
         score: GPA: 3.64 (3.97 in Political Science)
-        highlights:
-          - Description 1.
-          - Description 2.
 
     Research Experience:
       - company: Inter-university Consortium for Political and Social Research
@@ -110,17 +103,13 @@ cv:
     Skills:
       - name: Programming
         level: Master
-        icon: 
         keywords: "R, Stata, Python, C++, QGIS3"
       - name: Quantitative Methods
         level: Master
-        icon: 
         keywords: "OLS/Multivariate/Logit/Probit Regression Modeling, Latent variable modeling, Heckman Selection Modeling, Content analysis, Data cleaning"
 
     Interests:
-      - name: 
-        icon: 
-        keywords: "Conflict and cooperation, security studies, militarization, international interventions, human rights"
+      - keywords: "Conflict and cooperation, security studies, militarization, international interventions, human rights"
 
 
     Conference Presentations and Working Papers:
