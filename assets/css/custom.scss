@@ -1,29 +1,11 @@
----
-# This front matter ensures Jekyll compiles the SCSS correctly!
----
-
-// Completely hide the 'cmd K' text / keyboard icon next to search magnifying glass
-.navbar #search-toggle span, 
-.navbar #search-toggle kbd,
-#search-toggle .nav-link span,
-#search-toggle .nav-link kbd {
-  display: none !important;
+/* Bulletproof global fix to hide the 'cmd K' text but keep the search icon */
+#search-toggle {
+  font-size: 0 !important;
+  color: transparent !important;
 }
-
-// Lock the profile sidebar in place when scrolling down long biographies
-.sticky-sidebar {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 90px !important; 
-  z-index: 10;
-}
-
-// Clean spacing adjustments for vertical metadata links
-.sidebar-meta-list li a {
-  transition: color 0.2s ease-in-out;
-}
-
-.sidebar-meta-list li a:hover {
-  color: var(--global-theme-color) !important;
-  text-decoration: none !important;
+#search-toggle i, 
+#search-toggle svg {
+  font-size: 1.2rem !important; 
+  color: var(--global-text-color) !important; 
+  visibility: visible !important;
 }
