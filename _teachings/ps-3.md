@@ -6,10 +6,10 @@ instructor: Prof. David Broockman
 role: Graduate Student Instructor
 year: 2026
 term: Fall
-#location: Science Building, Room 202
-#time: Mondays and Wednesdays, 2:00-3:30 PM
+# location: Science Building, Room 202
+# time: Mondays and Wednesdays, 2:00-3:30 PM
 course_id: ps-3
-#schedule:
+# schedule:
 #  - week: 1
 #    date: Feb 5
 #    topic: Introduction to Data Science
