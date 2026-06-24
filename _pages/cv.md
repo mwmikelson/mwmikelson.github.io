@@ -221,8 +221,8 @@ toc:
   }
 </style>
 
-<a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="cv-pdf-icon" title="Download PDF">
-  <i class="fa-solid fa-file-pdf"></i>
+<a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="cv-pdf-icon" title="View / Download PDF">
+  <i class="fa-regular fa-file-arrow-down"></i>
 </a>
 
 
