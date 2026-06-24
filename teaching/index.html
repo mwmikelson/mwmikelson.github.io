@@ -11,18 +11,19 @@
     align-items: center !important;
     gap: 6px;
     padding: 4px 10px !important;
-    margin-top: 10px !important;
+    margin-top: 15px !important;
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
-    color: #888888 !important; /* Light Gray text */
+    color: #888888 !important; 
     background-color: transparent !important;
-    border: 1px solid #888888 !important; /* Light Gray outline */
+    border: 1px solid #888888 !important; 
     border-radius: 4px !important;
     text-decoration: none !important;
     transition: all 0.2s ease-in-out !important;
     z-index: 10 !important;
     position: relative !important;
+    cursor: pointer !important; /* Ensures it feels like a button */
   }
   
   .course-btn-custom:hover {
@@ -35,7 +36,44 @@
   #search-toggle { font-size: 0 !important; }
   #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
   kbd, .nav-search-key, .search-key { display: none !important; }
-</style> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Graduate Student Instructor for Prof. David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.<br><br> <a href="/assets/pdf/ps-3-syllabus.pdf" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();"><i class="fa-solid fa-file-pdf"></i> Syllabus</a> <a href="/assets/pdf/ps-3-section-syllabus.pdf" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();"><i class="fa-solid fa-file-pdf"></i> Section Syllabus</a></p> </div> </div> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/introduction-to-machine-learning/">Introduction to Machine Learning</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Example</span> </div> <div class="course-description"> <p>This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.</p> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
+</style> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Graduate Student Instructor for Prof. David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.</p> </div> </div> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/introduction-to-machine-learning/">Introduction to Machine Learning</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Example</span> </div> <div class="course-description"> <p>This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.</p> </div> </div> </div> </div> <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Find all course cards on the page
+    const cards = document.querySelectorAll('.card-body');
+    
+    cards.forEach(card => {
+      const title = card.querySelector('.card-title');
+      
+      // Target the PS 3 Card specifically
+      if (title && title.textContent.includes('PS 3')) {
+        const btnContainer = document.createElement('div');
+        
+        // Create Button 1 (Using SPAN to prevent breaking the clickable card)
+        const btn1 = document.createElement('span');
+        btn1.className = 'course-btn-custom';
+        btn1.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Syllabus';
+        btn1.onclick = function(e) { 
+          e.preventDefault(); // Stops the card from expanding
+          window.open("/assets/pdf/ps-3-syllabus.pdf", '_blank'); 
+        };
+        
+        // Create Button 2
+        const btn2 = document.createElement('span');
+        btn2.className = 'course-btn-custom';
+        btn2.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Section Syllabus';
+        btn2.onclick = function(e) { 
+          e.preventDefault(); // Stops the card from expanding
+          window.open("/assets/pdf/ps-3-section-syllabus.pdf", '_blank'); 
+        };
+        
+        // Attach them securely to the card
+        btnContainer.appendChild(btn1);
+        btnContainer.appendChild(btn2);
+        card.appendChild(btnContainer);
+      }
+    });
+  });
+</script> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Graduate Student Instructor for Prof. David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.</p> </div> </div> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/introduction-to-machine-learning/">Introduction to Machine Learning</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Example</span> </div> <div class="course-description"> <p>This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.</p> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -498,7 +536,7 @@ ninja.data = [{
               window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{id: "teachings-ps-3-introduction-to-empirical-analysis-and-quantitative-methods",
           title: 'PS 3: Introduction to Empirical Analysis and Quantitative Methods',
-          description: "This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.  Syllabus  Section Syllabus",
+          description: "This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/ps-3/";
             },},{
