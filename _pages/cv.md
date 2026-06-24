@@ -297,31 +297,29 @@ toc:
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">"Measuring Militarization and the Link with Interstate Conflict"</div>
-      <div class="cv-date">2025</div>
+      <div class="cv-date"></div>
     </div>
-    <div class="cv-sub">Senior Honors Thesis, University of Michigan</div>
+    <div class="cv-sub">Senior Honors Thesis, University of Michigan, Spring 2025</div>
     <ul>
       <li>Poster presentation at the Midwest Political Science Association Conference, April 2025.</li>
+      <li>Poster presentation at the American Political Science Association Conference, September 2025</li>
     </ul>
   </div>
 
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">"Third-Party Military Interventions, Government Repression, and Human Rights"</div>
-      <div class="cv-date">2024</div>
+      <div class="cv-date"></div>
     </div>
-    <div class="cv-sub">Ralph Bunche Summer Institute Paper</div>
-    <ul>
-      <li>Presented as an APSA Ralph Bunche Summer Institute Scholar, June 2024.</li>
-    </ul>
+    <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
   </div>
 
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">"Militarization and Interstate Armed Conflict"</div>
-      <div class="cv-date">2023</div>
+      <div class="cv-date"></div>
     </div>
-    <div class="cv-sub">American Political Science Association Annual Meeting</div>
+    <div class="cv-sub">Vanderbilt REU Paper, July 2023</div>
     <ul>
       <li>Poster presentation at the American Political Science Association Annual Meeting, September 2023.</li>
     </ul>
