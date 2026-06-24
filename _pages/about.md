@@ -15,6 +15,17 @@ latest_posts:
   enabled: false
 ---
 
+<style>
+  /* Remove the 'cmd K' shortcut display on this page */
+  #search-toggle .nav-search-key,
+  #search-toggle span,
+  #search-toggle kbd,
+  .nav-search-key,
+  kbd {
+    display: none !important;
+  }
+</style>
+
 <div style="display: flex; flex-wrap: wrap; margin-top: 30px; gap: 5%; width: 100%;">
   
   <div style="flex: 0 0 35%; min-width: 260px; padding: 0; margin: 0;">

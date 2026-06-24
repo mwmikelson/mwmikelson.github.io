@@ -8,6 +8,17 @@ nav_order: 6
 calendar: false
 ---
 
+<style>
+  /* Remove the 'cmd K' shortcut display on this page */
+  #search-toggle .nav-search-key,
+  #search-toggle span,
+  #search-toggle kbd,
+  .nav-search-key,
+  kbd {
+    display: none !important;
+  }
+</style>
+
 {% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
 
 {% include courses.liquid %}
