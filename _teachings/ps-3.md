@@ -4,8 +4,8 @@ title: "PS 3: Introduction to Empirical Analysis and Quantitative Methods"
 # We inject the spans here for the preview card, but add "preview-only-btn" so we can hide them on this page!
 description: >
   This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.<br><br>
-  <span onclick="window.location.href='/assets/pdf/ps-3-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-lines"></i> Syllabus</span>
-  <span onclick="window.location.href='/assets/pdf/ps-3-section-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-lines"></i> Section Syllabus</span>
+  <span onclick="window.location.href='/assets/pdf/ps-3-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-regular fa-file-lines"></i> Syllabus</span>
+  <span onclick="window.location.href='/assets/pdf/ps-3-section-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-regular fa-file-lines"></i> Section Syllabus</span>
 instructor: "Graduate Student Instructor for David Broockman"
 role: Graduate Student Instructor
 year: 2026
@@ -65,10 +65,10 @@ course_id: ps-3
 </style>
 
 <a href="{{ '/assets/pdf/ps-3-syllabus.pdf' | relative_url }}" class="course-btn-custom">
-  <i class="fa-solid fa-file-lines"></i> Syllabus
+  <i class="fa-regular fa-file-lines"></i> Syllabus
 </a>
 <a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" class="course-btn-custom">
-  <i class="fa-solid fa-file-lines"></i> Section Syllabus
+  <i class="fa-regular fa-file-contract"></i> Section Syllabus
 </a>
 
 {% comment %}

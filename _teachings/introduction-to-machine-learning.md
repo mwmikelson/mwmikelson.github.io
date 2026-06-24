@@ -4,7 +4,7 @@ title: Introduction to Machine Learning
 description: >
   This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.<br><br>
   <span onclick="window.location.href='/assets/pdf/ml-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-regular fa-file-lines"></i> Syllabus</span>
-  <span onclick="window.location.href='/assets/pdf/ml-section-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-regular fa-file-lines"></i> Section Syllabus</span>
+  <span onclick="window.location.href='/assets/pdf/ml-section-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-regular fa-file-contract"></i> Section Syllabus</span>
 instructor: Prof. Example
 year: 2026
 term: Spring
@@ -131,7 +131,7 @@ schedule:
   <i class="fa-regular fa-file-lines"></i> Syllabus
 </a>
 <a href="{{ '/assets/pdf/ml-section-syllabus.pdf' | relative_url }}" class="course-btn-custom">
-  <i class="fa-regular fa-file-lines"></i> Section Syllabus
+  <i class="fa-regular fa-file-contract"></i> Section Syllabus
 </a>
 
 
