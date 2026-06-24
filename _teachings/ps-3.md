@@ -21,13 +21,6 @@ course_id: ps-3
 #        url: /assets/pdf/example_pdf.pdf
 ---
 
-<a href="{{ '/assets/pdf/ps-3-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
-  <i class="fa-solid fa-file-pdf"></i> Syllabus
-</a>
-<a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
-  <i class="fa-solid fa-file-pdf"></i> Section Syllabus
-</a>
-
 <style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
@@ -44,6 +37,13 @@ course_id: ps-3
     margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
   }
 </style>
+
+<a href="{{ '/assets/pdf/ps-3-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+  <i class="fa-solid fa-file-pdf"></i> Syllabus
+</a>
+<a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+  <i class="fa-solid fa-file-pdf"></i> Section Syllabus
+</a>
 
 {% comment %}
 
