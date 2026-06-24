@@ -1,7 +1,10 @@
 ---
 layout: course
 title: Introduction to Machine Learning
-description: This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.
+description: >
+  This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.<br><br>
+  <span onclick="window.location.href='/assets/pdf/ml-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-pdf"></i> Syllabus</span>
+  <span onclick="window.location.href='/assets/pdf/ml-section-syllabus.pdf'; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-pdf"></i> Section Syllabus</span>
 instructor: Prof. Example
 year: 2026
 term: Spring
@@ -85,12 +88,52 @@ schedule:
         url: https://github.com/
 ---
 
-<a href="{{ '/assets/pdf/ml-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+<style>
+  /* 1. This hides the buttons from the description so they don't duplicate on this page! */
+  .preview-only-btn {
+    display: none !important;
+  }
+
+  /* 2. Button styling for the ones we actually want to show on this page */
+  .course-btn-custom {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px;
+    padding: 4px 10px !important;
+    margin-bottom: 25px !important; /* Adds space below the buttons */
+    margin-right: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #888888 !important; 
+    background-color: transparent !important;
+    border: 1px solid #888888 !important; 
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out !important;
+    z-index: 10 !important;
+    position: relative !important;
+    cursor: pointer !important;
+  }
+  
+  .course-btn-custom:hover {
+    color: #555555 !important;
+    border-color: #555555 !important;
+    background-color: rgba(0,0,0,0.02) !important;
+  }
+
+  /* CMD K Eraser Fallback for this page too */
+  #search-toggle { font-size: 0 !important; }
+  #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
+  kbd, .nav-search-key, .search-key { display: none !important; }
+</style>
+
+<a href="{{ '/assets/pdf/ml-syllabus.pdf' | relative_url }}" class="course-btn-custom">
   <i class="fa-solid fa-file-pdf"></i> Syllabus
 </a>
-<a href="{{ '/assets/pdf/ml-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+<a href="{{ '/assets/pdf/ml-section-syllabus.pdf' | relative_url }}" class="course-btn-custom">
   <i class="fa-solid fa-file-pdf"></i> Section Syllabus
 </a>
+
 
 ## Course Overview
 
