@@ -9,20 +9,34 @@ calendar: false
 ---
 
 <style>
-  /* 5. The INSTANT CMD K Killer and Alignment Fix */
-  #search-toggle {
-    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
-    color: transparent !important; /* Makes it completely invisible */
-    display: inline-flex !important; 
-    align-items: center !important; /* Forces perfect vertical alignment */
+  /* 1. Bulletproof Outline Buttons (Neutral Color, NOT Blue) */
+  .course-btn-custom {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px;
+    padding: 4px 10px !important;
+    margin-top: 10px !important;
+    margin-right: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: var(--global-text-color) !important; /* Forces it to use standard text color (grey/black/white) */
+    background-color: transparent !important;
+    border: 1px solid var(--global-text-color) !important; /* Creates the clean outline */
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease-in-out !important;
+    z-index: 10 !important;
+    position: relative !important;
   }
   
-  #search-toggle i, 
-  #search-toggle svg {
-    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
-    color: var(--global-text-color) !important; /* Restores its proper color */
-    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
+  .course-btn-custom:hover {
+    opacity: 0.6 !important;
   }
+
+  /* 2. CMD K Eraser Fallback */
+  #search-toggle { font-size: 0 !important; }
+  #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
+  kbd, .nav-search-key, .search-key { display: none !important; }
 </style>
 
 {% include courses.liquid %}
