@@ -2,3 +2,19 @@
 #search-toggle span, #search-toggle kbd {
   display: none !important;
 }
+
+/* Lock the profile sidebar in place when scrolling */
+.sticky-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px; /* Keeps it right below the navigation bar */
+}
+
+/* Make the social icons smaller and neatly spaced */
+.custom-small-icons {
+  font-size: 1.4rem; /* Standard is 2rem, this shrinks them down nicely */
+}
+
+.custom-small-icons a {
+  margin: 0 5px; /* Adds a tiny bit of breathing room between the icons */
+}
