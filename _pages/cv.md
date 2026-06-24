@@ -31,7 +31,6 @@ toc:
     color: var(--global-theme-color) !important;
     margin-top: 10px !important;
     margin-bottom: 15px !important;
-    text-transform: uppercase !important;
     letter-spacing: 0.8px !important;
     border-bottom: none !important;
   }
@@ -158,14 +157,26 @@ toc:
     color: var(--global-theme-color);
     text-decoration-color: var(--global-theme-color);
   }
+
+  /* 5. The INSTANT CMD K Killer and Alignment Fix */
+  .search-toggle {
+    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
+    color: transparent !important; /* Makes it completely invisible */
+    display: inline-flex !important; 
+    align-items: center !important; /* Forces perfect vertical alignment */
+  }
+  
+  .search-toggle i, .search-toggle svg {
+    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
+    color: var(--global-text-color) !important; /* Restores its proper color */
+    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
+  }
 </style>
 
 <!-- PDF DOWNLOAD BUTTON -->
-<div style="text-align: right; margin-bottom: 25px;">
-  <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" class="btn btn-sm z-depth-1" target="_blank" rel="noopener noreferrer" style="background-color: var(--global-theme-color); color: #fff; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 4px;">
-    <i class="fa-solid fa-file-pdf" style="margin-right: 5px;"></i> Download PDF
-  </a>
-</div>
+<a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="cv-pdf-icon" title="Download PDF">
+  <i class="fa-solid fa-file-pdf"></i>
+</a>
 
 
 ## Education
