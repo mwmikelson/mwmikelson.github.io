@@ -38,6 +38,23 @@ toc:
   }
 
   /* 3. Aggressive Eradication of the ⌘ k text shortcut */
+  #search-toggle,
+  .search-toggle,
+  .nav-item.search,
+  .navbar-nav .search-toggle {
+    font-size: 0 !important; /* Erases any loose text nodes like ⌘ k instantly */
+  }
+  
+  #search-toggle i,
+  #search-toggle svg,
+  .search-toggle i,
+  .search-toggle svg,
+  .nav-item.search i,
+  .nav-item.search svg {
+    font-size: 1.2rem !important; /* Preserves just the search icon size */
+    display: inline-block !important;
+  }
+  
   kbd, 
   .nav-search-key, 
   .search-key,
@@ -49,15 +66,14 @@ toc:
     width: 0 !important;
     height: 0 !important;
   }
-  
-  .search-toggle {
-    display: inline-flex !important; 
-    align-items: center !important; 
-  }
-  
-  .search-toggle i, .search-toggle svg {
-    font-size: 1.2rem !important;
-    color: var(--global-text-color) !important;
+
+  /* 4. Expand Page Width on Desktop to Prevent Unnecessary Text Wrapping */
+  @media (min-width: 992px) {
+    .container, 
+    .post {
+      max-width: 1050px !important;
+      width: 100% !important;
+    }
   }
 
   /* Designing the Clean Curved Section Boxes */
@@ -205,7 +221,6 @@ toc:
   }
 </style>
 
-<!-- THE ONE TRUE PDF ICON (Positioned perfectly on the right baseline) -->
 <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="cv-pdf-icon" title="Download PDF">
   <i class="fa-solid fa-file-pdf"></i>
 </a>
