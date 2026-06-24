@@ -7,36 +7,57 @@ nav_order: 5
 toc:
   sidebar: left
 ---
-<!-- Bulletproof PDF Alignment Script to perfectly match Screenshot 2026-06-24 at 12.16.09 AM.png -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const pageTitle = document.querySelector(".post-title");
-    if (pageTitle && !document.querySelector(".cv-pdf-native-icon")) {
-      const pdfLink = document.createElement("a");
-      pdfLink.href = "{{ '/assets/pdf/CV.pdf' | relative_url }}";
-      pdfLink.target = "_blank";
-      pdfLink.rel = "noopener noreferrer";
-      pdfLink.className = "cv-pdf-native-icon";
-      pdfLink.style.float = "right";
-      pdfLink.style.color = "var(--global-theme-color)"; /* Matches your theme's exact accent color */
-      pdfLink.style.fontSize = "1.6rem";
-      pdfLink.style.transition = "opacity 0.2s ease";
-      pdfLink.title = "Download PDF";
-      pdfLink.innerHTML = '<i class="fa-solid fa-file-pdf"></i>';
-      
-      // Add hover opacity dimming
-      pdfLink.onmouseover = () => pdfLink.style.opacity = "0.8";
-      pdfLink.onmouseout = () => pdfLink.style.opacity = "1";
-      
-      pageTitle.appendChild(pdfLink);
-    }
-  });
-</script>
 
 <style>
-  /* Global Page Container Adjustments */
+  /* 1. Bulletproof Alignment for the ONE True PDF Icon */
   .post {
+    position: relative !important;
     width: 100% !important;
+  }
+  
+  .cv-pdf-icon {
+    position: absolute !important;
+    right: 0 !important;
+    top: 6px !important; /* Perfectly levels it horizontally with the "CV" title text */
+    font-size: 1.75rem !important;
+    color: var(--global-theme-color) !important;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+  }
+  
+  .cv-pdf-icon:hover {
+    opacity: 0.75;
+  }
+
+  /* 2. Make the Scrolly Sidebar (TOC) text slightly bigger */
+  #toc .nav-link, 
+  .toc-entry a, 
+  nav[data-toggle="toc"] a {
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* 3. Aggressive Eradication of the ⌘ k text shortcut */
+  kbd, 
+  .nav-search-key, 
+  .search-key,
+  span[class*="search-key"],
+  .search-toggle span {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  .search-toggle {
+    display: inline-flex !important; 
+    align-items: center !important; 
+  }
+  
+  .search-toggle i, .search-toggle svg {
+    font-size: 1.2rem !important;
+    color: var(--global-text-color) !important;
   }
 
   /* Designing the Clean Curved Section Boxes */
@@ -182,23 +203,9 @@ toc:
     color: var(--global-theme-color);
     text-decoration-color: var(--global-theme-color);
   }
-
-  /* 5. The INSTANT CMD K Killer and Alignment Fix */
-  .search-toggle {
-    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
-    color: transparent !important; /* Makes it completely invisible */
-    display: inline-flex !important; 
-    align-items: center !important; /* Forces perfect vertical alignment */
-  }
-  
-  .search-toggle i, .search-toggle svg {
-    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
-    color: var(--global-text-color) !important; /* Restores its proper color */
-    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
-  }
 </style>
 
-<!-- PDF DOWNLOAD BUTTON -->
+<!-- THE ONE TRUE PDF ICON (Positioned perfectly on the right baseline) -->
 <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="cv-pdf-icon" title="Download PDF">
   <i class="fa-solid fa-file-pdf"></i>
 </a>
