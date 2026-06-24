@@ -2,7 +2,7 @@
 # This front matter ensures Jekyll compiles the SCSS correctly!
 ---
 
-/* Completely hide the 'cmd K' text / keyboard icon next to search magnifying glass */
+// Completely hide the 'cmd K' text / keyboard icon next to search magnifying glass
 .navbar #search-toggle span, 
 .navbar #search-toggle kbd,
 #search-toggle .nav-link span,
@@ -10,7 +10,7 @@
   display: none !important;
 }
 
-/* Lock the profile sidebar in place when scrolling */
+// Lock the profile sidebar in place when scrolling
 .sticky-sidebar {
   position: -webkit-sticky !important;
   position: sticky !important;
@@ -18,7 +18,7 @@
   z-index: 10;
 }
 
-/* Force social icons to be nicely sized and inline under the photo */
+// Force social icons to be nicely sized and inline under the photo
 .custom-sidebar-socials {
   display: flex !important;
   justify-content: center !important;
@@ -28,7 +28,7 @@
 }
 
 .custom-sidebar-socials a {
-  font-size: 1.3rem !important; /* Drastically shrinks them */
+  font-size: 1.3rem !important; // Drastically shrinks them
   color: var(--global-text-color) !important;
   transition: color 0.2s ease-in-out;
 }
