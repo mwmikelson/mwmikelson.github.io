@@ -40,7 +40,21 @@ latest_posts:
       <!-- Social Icons directly under the photo -->
       <div class="social mt-4 text-center">
         <div class="contact-icons custom-small-icons">
-          {% include social.liquid %}
+          
+          <!-- Hardcoded icons to bypass the broken theme file -->
+          {% if site.email %}
+            <a href="mailto:{{ site.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          {% endif %}
+          {% if site.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          {% endif %}
+          {% if site.x_username %}
+            <a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+          {% endif %}
+          {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          {% endif %}
+
         </div>
         <div class="contact-note mt-2" style="font-size: 0.8rem;">
           {{ site.contact_note }}
@@ -53,7 +67,8 @@ latest_posts:
   <div class="col-sm-8">
     <div class="clearfix">
       
-      Maya Mikelson is a Ph.D. student in Political Science at the University of California, Berkeley, specializing in International Relations and Methods. Her research interests include conflict, militarization, interventions, and human rights. Before attending Berkeley, she earned a B.S. with High Honors in Political Science from the University of Michigan, Ann Arbor. Her senior thesis examined how militarization is measured and the relationship between militarization and conflict, using a latent variable model. She was an APSA Ralph Bunche Summer Institute Scholar in 2024.
+    Maya Mikelson is a Ph.D. student in Political Science at the University of California, Berkeley, specializing in International Relations and Methods. Her research interests include conflict, militarization, interventions, and human rights. Before attending Berkeley, she earned a B.S. with High Honors in Political Science from the University of Michigan, Ann Arbor. Her senior thesis examined how militarization is measured and the relationship between militarization and conflict, using a latent variable model. She was an APSA Ralph Bunche Summer Institute Scholar in 2024.
+
 
     </div>
   </div>
