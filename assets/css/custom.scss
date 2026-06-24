@@ -10,7 +10,7 @@
   display: none !important;
 }
 
-// Lock the profile sidebar in place when scrolling
+// Lock the profile sidebar in place when scrolling down long biographies
 .sticky-sidebar {
   position: -webkit-sticky !important;
   position: sticky !important;
@@ -18,22 +18,12 @@
   z-index: 10;
 }
 
-// Force social icons to be nicely sized and inline under the photo
-.custom-sidebar-socials {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 15px !important;
-  margin-top: 15px !important;
-}
-
-.custom-sidebar-socials a {
-  font-size: 1.3rem !important; // Drastically shrinks them
-  color: var(--global-text-color) !important;
+// Clean spacing adjustments for vertical metadata links
+.sidebar-meta-list li a {
   transition: color 0.2s ease-in-out;
 }
 
-.custom-sidebar-socials a:hover {
+.sidebar-meta-list li a:hover {
   color: var(--global-theme-color) !important;
   text-decoration: none !important;
 }

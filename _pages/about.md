@@ -1,59 +1,74 @@
 ---
 layout: about
 title: About
-permalink: / 
+permalink: /
 subtitle: Ph.D. Student in Political Science
 
+# Turning these off stops the theme from injecting duplicate images or footer blocks
 profile:
-  align: left
-  image: profile.jpg
-  image_circular: false # crops the image to make it circular
-
-
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
+  enabled: false
+social: false
+selected_papers: false
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
+  enabled: false
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 <div class="row">
   
-  <!-- LEFT SIDEBAR: Photo and Socials -->
   <div class="col-sm-4">
-    <div class="profile sticky-sidebar text-center">
+    <div class="profile sticky-sidebar">
       
-      <!-- Safe, pure HTML photo tag with rounded corners -->
-      <img src="{{ '/assets/img/profile.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded mb-4" alt="Maya W. Mikelson" style="width: 100%; max-width: 270px; height: auto;">
+      <div class="text-center">
+        <img src="{{ '/assets/img/profile.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded mb-4" alt="Maya W. Mikelson" style="width: 100%; max-width: 240px; height: auto;">
+      </div>
       
-      <!-- Compact Social Icons -->
-      <div class="custom-sidebar-socials">
+      <ul class="sidebar-meta-list" style="list-style: none; padding-left: 0; margin-top: 20px; font-size: 0.95rem; line-height: 2.2;">
+        <li>
+          <i class="fa-solid fa-location-dot" style="width: 25px; color: var(--global-theme-color);"></i> 
+          <span>Berkeley, CA</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-graduation-cap" style="width: 25px; color: var(--global-theme-color);"></i> 
+          <span>UC Berkeley</span>
+        </li>
         {% if site.email %}
-          <a href="mailto:{{ site.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <li>
+          <a href="mailto:{{ site.email }}" style="color: inherit;">
+            <i class="fa-solid fa-envelope" style="width: 25px; color: var(--global-theme-color);"></i> 
+            <span>Email</span>
+          </a>
+        </li>
         {% endif %}
+        <li>
+          <a href="https://orcid.org/0009-0002-7945-0057" target="_blank" rel="noopener noreferrer" style="color: inherit;">
+            <i class="fa-brands fa-orcid" style="width: 25px; color: var(--global-theme-color);"></i> 
+            <span>ORCID</span>
+          </a>
+        </li>
         {% if site.linkedin_username %}
-          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        {% endif %}
-        {% if site.x_username %}
-          <a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <li>
+          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" style="color: inherit;">
+            <i class="fa-brands fa-linkedin" style="width: 25px; color: var(--global-theme-color);"></i> 
+            <span>LinkedIn</span>
+          </a>
+        </li>
         {% endif %}
         {% if site.github_username %}
-          <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <li>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" style="color: inherit;">
+            <i class="fa-brands fa-github" style="width: 25px; color: var(--global-theme-color);"></i> 
+            <span>GitHub</span>
+          </a>
+        </li>
         {% endif %}
-      </div>
+      </ul>
       
     </div>
   </div>
 
-  <!-- RIGHT CONTENT: Biography Text -->
-  <div class="col-sm-8">
-    <div class="clearfix">
+  <div class="col-sm-8" style="padding-top: 5px;">
+    <div class="clearfix" style="font-size: 1.05rem; line-height: 1.6;">
       
       Maya Mikelson is a Ph.D. student in Political Science at the University of California, Berkeley, specializing in International Relations and Methods. Her research interests include conflict, militarization, interventions, and human rights. Before attending Berkeley, she earned a B.S. with High Honors in Political Science from the University of Michigan, Ann Arbor. Her senior thesis examined how militarization is measured and the relationship between militarization and conflict, using a latent variable model. She was an APSA Ralph Bunche Summer Institute Scholar in 2024.
 
@@ -61,4 +76,3 @@ latest_posts:
   </div>
   
 </div>
-
