@@ -1,0 +1,4 @@
+/* Hide the search shortcut text in the navigation bar */
+#search-toggle span, #search-toggle kbd {
+  display: none !important;
+}
