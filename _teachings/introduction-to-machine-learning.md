@@ -85,6 +85,13 @@ schedule:
         url: https://github.com/
 ---
 
+<a href="{{ '/assets/pdf/ml-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+  <i class="fa-solid fa-file-pdf"></i> Syllabus
+</a>
+<a href="{{ '/assets/pdf/ml-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
+  <i class="fa-solid fa-file-pdf"></i> Section Syllabus
+</a>
+
 ## Course Overview
 
 This introductory course on machine learning covers fundamental concepts and algorithms in the field. By the end of this course, students will be able to:
