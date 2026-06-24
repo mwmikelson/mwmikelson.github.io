@@ -21,6 +21,12 @@ course_id: ps-3
 #        url: /assets/pdf/example_pdf.pdf
 ---
 
+<style>
+  /* Remove the 'cmd K' text bubble on this course page */
+  kbd, .nav-search-key {
+    display: none !important;
+  }
+</style>
 
 {% comment %}
 

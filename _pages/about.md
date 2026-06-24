@@ -16,12 +16,8 @@ latest_posts:
 ---
 
 <style>
-  /* Remove the 'cmd K' shortcut display on this page */
-  #search-toggle .nav-search-key,
-  #search-toggle span,
-  #search-toggle kbd,
-  .nav-search-key,
-  kbd {
+  /* Remove ONLY the 'cmd K' text bubble, keeping the magnifying glass search icon untouched */
+  kbd, .nav-search-key {
     display: none !important;
   }
 </style>

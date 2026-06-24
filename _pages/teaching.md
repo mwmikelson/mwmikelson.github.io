@@ -9,12 +9,8 @@ calendar: false
 ---
 
 <style>
-  /* Remove the 'cmd K' shortcut display on this page */
-  #search-toggle .nav-search-key,
-  #search-toggle span,
-  #search-toggle kbd,
-  .nav-search-key,
-  kbd {
+  /* Remove the 'cmd K' text bubble on this course page */
+  kbd, .nav-search-key {
     display: none !important;
   }
 </style>
