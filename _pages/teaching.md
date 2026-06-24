@@ -9,7 +9,7 @@ calendar: false
 ---
 
 <style>
-  /* 1. Bulletproof Outline Buttons (Neutral Color, NOT Blue) */
+  /* 1. Bulletproof Outline Buttons (Light Gray) */
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
@@ -19,18 +19,20 @@ calendar: false
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
-    color: var(--global-text-color) !important; /* Forces it to use standard text color (grey/black/white) */
+    color: #888888 !important; /* Light Gray text */
     background-color: transparent !important;
-    border: 1px solid var(--global-text-color) !important; /* Creates the clean outline */
+    border: 1px solid #888888 !important; /* Light Gray outline */
     border-radius: 4px !important;
     text-decoration: none !important;
-    transition: opacity 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
     z-index: 10 !important;
     position: relative !important;
   }
   
   .course-btn-custom:hover {
-    opacity: 0.6 !important;
+    color: #555555 !important;
+    border-color: #555555 !important;
+    background-color: rgba(0,0,0,0.02) !important;
   }
 
   /* 2. CMD K Eraser Fallback */

@@ -25,29 +25,39 @@ course_id: ps-3
 #        url: /assets/pdf/example_pdf.pdf
 ---
 
+
 <style>
-  /* 5. The INSTANT CMD K Killer and Alignment Fix */
-  #search-toggle {
-    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
-    color: transparent !important; /* Makes it completely invisible */
-    display: inline-flex !important; 
-    align-items: center !important; /* Forces perfect vertical alignment */
+  /* Ensures the individual course page remembers how to draw the Light Gray buttons */
+  .course-btn-custom {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px;
+    padding: 4px 10px !important;
+    margin-top: 10px !important;
+    margin-right: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #888888 !important; /* Light Gray text */
+    background-color: transparent !important;
+    border: 1px solid #888888 !important; /* Light Gray outline */
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out !important;
+    z-index: 10 !important;
+    position: relative !important;
   }
   
-  #search-toggle i, 
-  #search-toggle svg {
-    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
-    color: var(--global-text-color) !important; /* Restores its proper color */
-    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
+  .course-btn-custom:hover {
+    color: #555555 !important;
+    border-color: #555555 !important;
+    background-color: rgba(0,0,0,0.02) !important;
   }
-</style>
 
-<a href="{{ '/assets/pdf/ps-3-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
-  <i class="fa-solid fa-file-pdf"></i> Syllabus
-</a>
-<a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();">
-  <i class="fa-solid fa-file-pdf"></i> Section Syllabus
-</a>
+  /* CMD K Eraser Fallback for this page too */
+  #search-toggle { font-size: 0 !important; }
+  #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
+  kbd, .nav-search-key, .search-key { display: none !important; }
+</style>
 
 {% comment %}
 
@@ -79,4 +89,3 @@ This course provides a comprehensive introduction to data science principles and
 - Participation: 10%
 
 {% endcomment %}
-
