@@ -1,11 +1,7 @@
 ---
 layout: course
 title: "PS 3: Introduction to Empirical Analysis and Quantitative Methods"
-# By using the > symbol, we can put HTML directly into the description so it shows on the preview card!
-description: >
-  This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.<br><br>
-  <a href="/assets/pdf/ps-3-syllabus.pdf" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();"><i class="fa-solid fa-file-pdf"></i> Syllabus</a>
-  <a href="/assets/pdf/ps-3-section-syllabus.pdf" target="_blank" class="course-btn-custom" onclick="event.stopPropagation();"><i class="fa-solid fa-file-pdf"></i> Section Syllabus</a>
+description: This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.
 instructor: "Graduate Student Instructor for Prof. David Broockman"
 role: Graduate Student Instructor
 year: 2026
@@ -25,15 +21,14 @@ course_id: ps-3
 #        url: /assets/pdf/example_pdf.pdf
 ---
 
-
 <style>
-  /* Ensures the individual course page remembers how to draw the Light Gray buttons */
+  /* Button styling for the individual course page */
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px;
     padding: 4px 10px !important;
-    margin-top: 10px !important;
+    margin-bottom: 25px !important;
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
@@ -53,11 +48,19 @@ course_id: ps-3
     background-color: rgba(0,0,0,0.02) !important;
   }
 
-  /* CMD K Eraser Fallback for this page too */
+  /* CMD K Eraser Fallback for this page too 
   #search-toggle { font-size: 0 !important; }
   #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
-  kbd, .nav-search-key, .search-key { display: none !important; }
+  kbd, .nav-search-key, .search-key { display: none !important; } */
 </style>
+
+<a href="{{ '/assets/pdf/ps-3-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom">
+  <i class="fa-solid fa-file-pdf"></i> Syllabus
+</a>
+<a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom">
+  <i class="fa-solid fa-file-pdf"></i> Section Syllabus
+</a>
+
 
 {% comment %}
 
