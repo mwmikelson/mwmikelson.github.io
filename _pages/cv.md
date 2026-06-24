@@ -7,6 +7,31 @@ nav_order: 5
 toc:
   sidebar: left
 ---
+<!-- Bulletproof PDF Alignment Script to perfectly match Screenshot 2026-06-24 at 12.16.09 AM.png -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const pageTitle = document.querySelector(".post-title");
+    if (pageTitle && !document.querySelector(".cv-pdf-native-icon")) {
+      const pdfLink = document.createElement("a");
+      pdfLink.href = "{{ '/assets/pdf/CV.pdf' | relative_url }}";
+      pdfLink.target = "_blank";
+      pdfLink.rel = "noopener noreferrer";
+      pdfLink.className = "cv-pdf-native-icon";
+      pdfLink.style.float = "right";
+      pdfLink.style.color = "var(--global-theme-color)"; /* Matches your theme's exact accent color */
+      pdfLink.style.fontSize = "1.6rem";
+      pdfLink.style.transition = "opacity 0.2s ease";
+      pdfLink.title = "Download PDF";
+      pdfLink.innerHTML = '<i class="fa-solid fa-file-pdf"></i>';
+      
+      // Add hover opacity dimming
+      pdfLink.onmouseover = () => pdfLink.style.opacity = "0.8";
+      pdfLink.onmouseout = () => pdfLink.style.opacity = "1";
+      
+      pageTitle.appendChild(pdfLink);
+    }
+  });
+</script>
 
 <style>
   /* Global Page Container Adjustments */
