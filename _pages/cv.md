@@ -374,18 +374,16 @@ toc:
       <div class="cv-date">2024</div>
     </div>
     <div class="cv-sub">University of Michigan</div>
-    <div class="cv-work-title">Honored Work: <em>Militarization and Interstate Conflict</em></div>
+    <div class="cv-work-title"><em>Militarization and Interstate Conflict</em></div>
   </div>
 
   <div class="cv-item">
     <div class="cv-row">
-      <div class="cv-title">
-        <a href="https://www.michigandaily.com/" target="_blank" class="cv-link">3rd Place, Best Interactive Infographic</a>
-      </div>
+      <div class="cv-title">3rd Place, Best Interactive Infographic</div>
       <div class="cv-date">2023</div>
     </div>
     <div class="cv-sub">Pinnacle College Media Awards</div>
-    <div class="cv-work-title">Honored Work: <em>How Walkable Is Your Block? The Michigan Daily</em></div>
+    <div class="cv-work-title"><em> <a href="https://www.michigandaily.com/web/how-walkable-is-your-block/" target="_blank" class="cv-link">How Walkable Is Your Block?</a> The Michigan Daily</em></div>
   </div>
 </div>
 
