@@ -28,7 +28,7 @@ course_id: ps-3
 
 <style>
   /* Ensures the individual course page remembers how to draw the Light Gray buttons */
-  .course-btn-custom {
+  /*.course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px;
@@ -37,21 +37,21 @@ course_id: ps-3
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
-    color: #888888 !important; /* Light Gray text */
+    color: #888888 !important; 
     background-color: transparent !important;
-    border: 1px solid #888888 !important; /* Light Gray outline */
+    border: 1px solid #888888 !important; 
     border-radius: 4px !important;
     text-decoration: none !important;
     transition: all 0.2s ease-in-out !important;
     z-index: 10 !important;
     position: relative !important;
-  }
+  }  
   
   .course-btn-custom:hover {
     color: #555555 !important;
     border-color: #555555 !important;
     background-color: rgba(0,0,0,0.02) !important;
-  }
+  } */
 
   /* CMD K Eraser Fallback for this page too */
   #search-toggle { font-size: 0 !important; }
