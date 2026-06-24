@@ -97,3 +97,19 @@ latest_posts:
   </div>
   
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var searchBtn = document.getElementById("search-toggle");
+    if (searchBtn) {
+      // Find the magnifying glass icon
+      var icon = searchBtn.querySelector("i, svg");
+      if (icon) {
+        // Clear out the button's entire contents (wiping the cmd K text)
+        searchBtn.innerHTML = "";
+        // Put ONLY the magnifying glass back
+        searchBtn.appendChild(icon);
+      }
+    }
+  });
+</script>
