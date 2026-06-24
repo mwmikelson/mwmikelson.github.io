@@ -251,7 +251,7 @@ toc:
 ## Research Interests
 <div class="cv-card">
   <div class="cv-item" style="margin-bottom: 0;">
-    <ul style="margin-top: 0; padding-left: 20px;">Conflict and cooperation, security studies, militarization, international interventions, human rights</ul>
+    <ul style="margin-top: 0; padding-left: 0px;">Conflict and cooperation, security studies, militarization, international interventions, human rights</ul>
   </div>
 </div>
 
