@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: / 
 subtitle: Ph.D. Student in Political Science
 
 profile:
@@ -61,3 +61,4 @@ latest_posts:
   </div>
   
 </div>
+
