@@ -1,0 +1,11 @@
+/* Bulletproof global fix to hide the 'cmd K' text but keep the search icon */
+#search-toggle {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+#search-toggle i, 
+#search-toggle svg {
+  font-size: 1.2rem !important; 
+  color: var(--global-text-color) !important; 
+  visibility: visible !important;
+}
