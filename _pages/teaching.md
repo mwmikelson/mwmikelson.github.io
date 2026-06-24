@@ -9,13 +9,13 @@ calendar: false
 ---
 
 <style>
-  /* 1. Bulletproof Outline Buttons (Light Gray) for when we safely add them */
+  /* 1. Bulletproof Outline Buttons (Light Gray) */
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px;
     padding: 4px 10px !important;
-    margin-top: 15px !important;
+    margin-top: 10px !important;
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
@@ -27,6 +27,7 @@ calendar: false
     transition: all 0.2s ease-in-out !important;
     z-index: 10 !important;
     position: relative !important;
+    cursor: pointer !important; /* Makes it act like a real clickable link */
   }
   
   .course-btn-custom:hover {
