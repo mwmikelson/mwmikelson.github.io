@@ -19,7 +19,7 @@
     color: var(--global-text-color) !important; /* Restores its proper color */
     margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
   }
-</style> <div class="post mt-4"> <h2 class="mb-3"> <i class="fas fa-calendar-alt"></i> Upcoming Events</h2> <button class="btn btn-sm btn-outline-primary mb-3 calendar-toggle-btn" type="button" onclick="toggleCalendar()" id="calendar-toggle-btn" aria-pressed="false"> Show Calendar </button> <div class="calendar-wrapper" id="calendar-container" style="display: none;"> <iframe id="calendar-iframe" data-calendar-id="test@gmail.com" data-timezone="Asia/Shanghai" style="border:0; width:100%; height:600px;" frameborder="0" scrolling="no"> </iframe> </div> </div> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Prof. David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.</p> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
+</style> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Prof. David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.</p> </div> </div> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/introduction-to-machine-learning/">Introduction to Machine Learning</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Example</span> </div> <div class="course-description"> <p>This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.</p> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -475,6 +475,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{id: "teachings-ps-3-introduction-to-empirical-analysis-and-quantitative-methods",
           title: 'PS 3: Introduction to Empirical Analysis and Quantitative Methods',
           description: "This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.",
