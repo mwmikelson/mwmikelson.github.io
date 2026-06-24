@@ -21,7 +21,9 @@ course_id: ps-3
 #        url: /assets/pdf/example_pdf.pdf
 ---
 
+
 {% comment %}
+
 
 ## Course Overview
 
@@ -50,3 +52,4 @@ This course provides a comprehensive introduction to data science principles and
 - Participation: 10%
 
 {% endcomment %}
+
