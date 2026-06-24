@@ -1,20 +1,14 @@
-/* Target the navbar search button and hide ANY text or keyboard elements inside it */
-header #search-toggle span,
-header #search-toggle kbd,
-header #search-toggle .search-shortcut {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
+/* INSTANT CMD K Killer and Alignment Fix */
+#search-toggle {
+  font-size: 0 !important; 
+  color: transparent !important; 
+  display: inline-flex !important; 
+  align-items: center !important; 
 }
 
-/* Ensure the magnifying glass icon remains perfectly visible */
-header #search-toggle i,
-header #search-toggle svg {
-  display: inline-block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  font-size: 1.2rem !important;
+#search-toggle i, 
+#search-toggle svg {
+  font-size: 1.25rem !important; 
+  color: var(--global-text-color) !important; 
+  margin-top: 2px !important; 
 }
