@@ -1,20 +1,39 @@
-/* Hide the search shortcut text in the navigation bar */
-#search-toggle span, #search-toggle kbd {
+---
+# This front matter ensures Jekyll compiles the SCSS correctly!
+---
+
+/* Completely hide the 'cmd K' text / keyboard icon next to search magnifying glass */
+.navbar #search-toggle span, 
+.navbar #search-toggle kbd,
+#search-toggle .nav-link span,
+#search-toggle .nav-link kbd {
   display: none !important;
 }
 
 /* Lock the profile sidebar in place when scrolling */
 .sticky-sidebar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 100px; /* Keeps it right below the navigation bar */
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 90px !important; 
+  z-index: 10;
 }
 
-/* Make the social icons smaller and neatly spaced */
-.custom-small-icons {
-  font-size: 1.4rem; /* Standard is 2rem, this shrinks them down nicely */
+/* Force social icons to be nicely sized and inline under the photo */
+.custom-sidebar-socials {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin-top: 15px !important;
 }
 
-.custom-small-icons a {
-  margin: 0 5px; /* Adds a tiny bit of breathing room between the icons */
+.custom-sidebar-socials a {
+  font-size: 1.3rem !important; /* Drastically shrinks them */
+  color: var(--global-text-color) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.custom-sidebar-socials a:hover {
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
 }
