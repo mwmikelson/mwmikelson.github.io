@@ -97,13 +97,3 @@ latest_posts:
   </div>
   
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Find any keyboard shortcut tags inside the search button and hide them
-    var cmdK = document.querySelectorAll('#search-toggle kbd, #search-toggle .nav-search-key');
-    cmdK.forEach(function(element) {
-      element.style.display = 'none';
-    });
-  });
-</script>
