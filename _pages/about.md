@@ -68,12 +68,19 @@ latest_posts:
     color: var(--global-text-color);
   }
 
-  /* 5. The CSS attempt to kill CMD K */
-  #search-toggle kbd, 
-  #search-toggle .nav-search-key {
-    display: none !important;
-    opacity: 0 !important;
-    width: 0 !important;
+  /* 5. The INSTANT CMD K Killer and Alignment Fix */
+  #search-toggle {
+    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
+    color: transparent !important; /* Makes it completely invisible */
+    display: inline-flex !important; 
+    align-items: center !important; /* Forces perfect vertical alignment */
+  }
+  
+  #search-toggle i, 
+  #search-toggle svg {
+    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
+    color: var(--global-text-color) !important; /* Restores its proper color */
+    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
   }
 </style>
 
@@ -97,19 +104,3 @@ latest_posts:
   </div>
   
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var searchBtn = document.getElementById("search-toggle");
-    if (searchBtn) {
-      // Find the magnifying glass icon
-      var icon = searchBtn.querySelector("i, svg");
-      if (icon) {
-        // Clear out the button's entire contents (wiping the cmd K text)
-        searchBtn.innerHTML = "";
-        // Put ONLY the magnifying glass back
-        searchBtn.appendChild(icon);
-      }
-    }
-  });
-</script>
