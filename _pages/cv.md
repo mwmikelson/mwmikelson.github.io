@@ -248,6 +248,12 @@ toc:
   </div>
 </div>
 
+## Research Interests
+<div class="cv-card">
+  <div class="cv-item" style="margin-bottom: 0;">
+    <ul style="margin-top: 0; padding-left: 20px;">Conflict and cooperation, security studies, militarization, international interventions, human rights</ul>
+  </div>
+</div>
 
 ## Research Experience
 <div class="cv-card">
