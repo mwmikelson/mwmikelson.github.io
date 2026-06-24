@@ -1,7 +1,11 @@
 ---
 layout: course
 title: "PS 3: Introduction to Empirical Analysis and Quantitative Methods"
-description: This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.
+# We inject the spans here for the preview card, but add "preview-only-btn" so we can hide them on this page!
+description: >
+  This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.<br><br>
+  <span onclick="window.open('/assets/pdf/ps-3-syllabus.pdf', '_blank'); event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-pdf"></i> Syllabus</span>
+  <span onclick="window.open('/assets/pdf/ps-3-section-syllabus.pdf', '_blank'); event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><i class="fa-solid fa-file-pdf"></i> Section Syllabus</span>
 instructor: "Graduate Student Instructor for David Broockman"
 role: Graduate Student Instructor
 year: 2026
@@ -22,24 +26,30 @@ course_id: ps-3
 ---
 
 <style>
-  /* Button styling for the individual course page */
+  /* 1. This hides the buttons from the description so they don't duplicate on this page! */
+  .preview-only-btn {
+    display: none !important;
+  }
+
+  /* 2. Button styling for the ones we actually want to show on this page */
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px;
     padding: 4px 10px !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 25px !important; /* Adds space below the buttons */
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
-    color: #888888 !important; /* Light Gray text */
+    color: #888888 !important; 
     background-color: transparent !important;
-    border: 1px solid #888888 !important; /* Light Gray outline */
+    border: 1px solid #888888 !important; 
     border-radius: 4px !important;
     text-decoration: none !important;
     transition: all 0.2s ease-in-out !important;
     z-index: 10 !important;
     position: relative !important;
+    cursor: pointer !important;
   }
   
   .course-btn-custom:hover {
@@ -60,7 +70,6 @@ course_id: ps-3
 <a href="{{ '/assets/pdf/ps-3-section-syllabus.pdf' | relative_url }}" target="_blank" class="course-btn-custom">
   <i class="fa-solid fa-file-pdf"></i> Section Syllabus
 </a>
-
 
 {% comment %}
 
