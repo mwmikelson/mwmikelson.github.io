@@ -43,3 +43,16 @@ calendar: false
 </style>
 
 {% include courses.liquid %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let tags = document.querySelectorAll("strong, b, th, td, span, div, p");
+    tags.forEach(function(tag) {
+      // Looks for the exact "Instructor:" label on the preview cards
+      if (tag.textContent.trim() === "Instructor:") {
+        tag.innerHTML = "<span style='font-weight: normal !important;'>Graduate Student Instructor for </span>";
+        tag.style.fontWeight = "normal";
+      }
+    });
+  });
+</script>
