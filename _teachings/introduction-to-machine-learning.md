@@ -2,11 +2,9 @@
 layout: course
 title: Introduction to Machine Learning
 description: >
-  <div style="font-size: 0.85rem; margin-bottom: -15px; line-height: 1.5;">
-    This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.<br><br>
-    <span onclick='window.location.href=`/assets/pdf/ml-syllabus.pdf`; event.preventDefault(); event.stopPropagation();' class='course-btn-custom preview-only-btn'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-text-icon lucide-file-text'><path d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z'/><path d='M14 2v5a1 1 0 0 0 1 1h5'/><path d='M10 9H8'/><path d='M16 13H8'/><path d='M16 17H8'/></svg> Syllabus</span>
-    <span onclick='window.location.href=`/assets/pdf/ml-section-syllabus.pdf`; event.preventDefault(); event.stopPropagation();' class='course-btn-custom preview-only-btn'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-chart-column-icon lucide-file-chart-column'><path d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z'/><path d='M14 2v5a1 1 0 0 0 1 1h5'/><path d='M8 18v-1'/><path d='M12 18v-6'/><path d='M16 18v-3'/></svg> Section Syllabus</span>
-  </div>
+  This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.<br><br>
+  <span onclick='window.location.href=`/assets/pdf/ml-syllabus.pdf`; event.preventDefault(); event.stopPropagation();' class='course-btn-custom preview-only-btn'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-text-icon lucide-file-text'><path d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z'/><path d='M14 2v5a1 1 0 0 0 1 1h5'/><path d='M10 9H8'/><path d='M16 13H8'/><path d='M16 17H8'/></svg> Syllabus</span>
+  <span onclick='window.location.href=`/assets/pdf/ml-section-syllabus.pdf`; event.preventDefault(); event.stopPropagation();' class='course-btn-custom preview-only-btn'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-chart-column-icon lucide-file-chart-column'><path d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z'/><path d='M14 2v5a1 1 0 0 0 1 1h5'/><path d='M8 18v-1'/><path d='M12 18v-6'/><path d='M16 18v-3'/></svg> Section Syllabus</span>
 instructor: Prof. Example
 year: 2026
 term: Spring
@@ -91,12 +89,19 @@ schedule:
 ---
 
 <style>
+  /* 1. Shrinks the description text to match the term/location/time text */
+  .post-description {
+    font-size: 1rem !important; 
+    margin-bottom: 10px !important; /* Pulls the content below it up closer */
+  }
+
+  /* 2. Button styling (with the gap reduced) */
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px;
     padding: 4px 10px !important;
-    margin-bottom: 25px !important; 
+    margin-bottom: 10px !important; /* REDUCED this gap from 25px to 10px */
     margin-right: 6px !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
@@ -117,26 +122,16 @@ schedule:
     background-color: rgba(0,0,0,0.02) !important;
   }
 
+  /* 3. Hides the duplicate preview buttons */
   span.course-btn-custom.preview-only-btn {
     display: none !important;
   }
 
+  /* 4. Search fallback */
   #search-toggle { font-size: 0 !important; }
   #search-toggle i, #search-toggle svg { font-size: 1.25rem !important; color: var(--global-text-color) !important; }
   kbd, .nav-search-key, .search-key { display: none !important; }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let tags = document.querySelectorAll("strong, b, th, td, span");
-    tags.forEach(function(tag) {
-      if (tag.textContent.trim() === "Instructor:") {
-        tag.innerHTML = "Graduate Student Instructor for ";
-        tag.style.fontWeight = "normal";
-      }
-    });
-  });
-</script>
 
 <a href="{{ '/assets/pdf/ml-syllabus.pdf' | relative_url }}" class="course-btn-custom"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> Syllabus</a>
 <a href="{{ '/assets/pdf/ml-section-syllabus.pdf' | relative_url }}" class="course-btn-custom"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-chart-column-icon lucide-file-chart-column"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M8 18v-1"/><path d="M12 18v-6"/><path d="M16 18v-3"/></svg> Section Syllabus</a>
