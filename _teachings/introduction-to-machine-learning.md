@@ -89,10 +89,6 @@ schedule:
 ---
 
 <style>
-  .preview-only-btn {
-    display: none !important;
-  }
-
   .course-btn-custom {
     display: inline-flex !important;
     align-items: center !important;
@@ -117,6 +113,11 @@ schedule:
     color: #555555 !important;
     border-color: #555555 !important;
     background-color: rgba(0,0,0,0.02) !important;
+  }
+
+  /* THIS IS THE FIX: High specificity guarantees the browser hides the top duplicate buttons */
+  span.course-btn-custom.preview-only-btn {
+    display: none !important;
   }
 
   #search-toggle { font-size: 0 !important; }
