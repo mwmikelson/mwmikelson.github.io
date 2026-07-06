@@ -70,12 +70,36 @@ course_id: ps-3
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    let tags = document.querySelectorAll("strong, b, th, td, span");
-    tags.forEach(function(tag) {
-      if (tag.textContent.trim() === "Instructor:") {
-        // The !important tag below forces the browser to drop the bold table header styling
-        tag.innerHTML = "<span style='font-weight: normal !important;'>Graduate Student Instructor for </span>";
-        tag.style.fontWeight = "normal";
+    // 1. Put the names of the professors you GSI'd for in these quotes!
+    // If you add more classes later, just add them to the list separated by commas.
+    const gsiProfessors = ["Prof. Example", "David Broockman"]; 
+    
+    // Find all bold/header tags on the page
+    const labels = document.querySelectorAll("strong, b, th, span");
+    
+    labels.forEach(label => {
+      // Find the labels that say Instructor
+      if (label.textContent.includes("Instructor")) {
+        
+        // Look at the text right next to it to see who the professor is
+        const containerText = label.parentElement.textContent;
+        
+        // Check if the professor is on your GSI list
+        const isGSICourse = gsiProfessors.some(prof => containerText.includes(prof));
+        
+        if (isGSICourse) {
+          // 1. Change the text and remove the bolding
+          label.innerHTML = "Graduate Student Instructor for";
+          label.style.fontWeight = "normal";
+          
+          // 2. Catch and delete the colon, even if it's hiding outside the bold tag!
+          let nextNode = label.nextSibling;
+          if (nextNode && nextNode.nodeType === Node.TEXT_NODE) {
+            nextNode.nodeValue = nextNode.nodeValue.replace(/^:\s*/, " ");
+          } else if (label.innerHTML.includes(":")) {
+            label.innerHTML = label.innerHTML.replace(":", "");
+          }
+        }
       }
     });
   });
