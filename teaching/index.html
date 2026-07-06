@@ -41,14 +41,12 @@
     // Put the names of your GSI professors here!
     const gsiProfessors = ["Prof. Example", "David Broockman"];
 
-    // This scans every single piece of raw text on your page
     const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
     let node;
     const textNodesToUpdate = [];
 
     while ((node = walk.nextNode())) {
       gsiProfessors.forEach(prof => {
-        // If it finds the professor's name, queue it up for a change
         if (node.nodeValue.includes(prof) && !node.nodeValue.includes("Graduate Student Instructor")) {
           textNodesToUpdate.push({ node: node, prof: prof });
         }
@@ -56,21 +54,31 @@
     }
 
     textNodesToUpdate.forEach(item => {
-      // 1. Swap the professor's name for the full GSI title
-      item.node.nodeValue = item.node.nodeValue.replace(item.prof, "Graduate Student Instructor for " + item.prof);
+      let text = item.node.nodeValue;
 
-      // 2. If the word "Instructor:" was in the exact same text block, erase it
-      item.node.nodeValue = item.node.nodeValue.replace(/Instructor:?\s*/i, "");
+      // 1. Remove any stray "Instructor:" text FIRST so we don't delete our own words later!
+      text = text.replace(/Instructor:?\s*/gi, "");
+
+      // 2. Inject the correct title safely
+      text = text.replace(item.prof, "Graduate Student Instructor for " + item.prof);
+      item.node.nodeValue = text;
 
       let parent = item.node.parentElement;
       if (parent) {
-        // 3. Force the text to be normal weight (removes the bolding)
+        // Force the main container to be normal, un-bolded text
         parent.style.setProperty("font-weight", "normal", "important");
 
-        // 4. If the theme put an "Instructor" label in a separate box right next to the name, hide it!
-        let prev = parent.previousElementSibling;
-        if (prev && prev.textContent.includes("Instructor")) {
-          prev.style.display = "none";
+        // 3. Hunt down and destroy any bold <strong> tags sitting right next to the text
+        let prevSib = item.node.previousSibling;
+        if (prevSib && prevSib.nodeType === 1 && prevSib.textContent.toLowerCase().includes("instructor")) {
+          prevSib.style.display = "none";
+        }
+
+        // 4. Hunt down and destroy any separate table headers (<th>) sitting right next to the text
+        let prevElem = parent.previousElementSibling;
+        if (prevElem && prevElem.textContent.toLowerCase().includes("instructor")) {
+          prevElem.style.display = "none";
+          prevElem.innerHTML = ""; // Empties the box so it doesn't leave weird bold formatting behind
         }
       }
     });
