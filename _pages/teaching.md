@@ -46,35 +46,39 @@ calendar: false
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Put the names of the professors you GSI'd for in these quotes!
-    // If you add more classes later, just add them to the list separated by commas.
-    const gsiProfessors = ["Prof. Example", "David Broockman"]; 
-    
-    // Find all bold/header tags on the page
-    const labels = document.querySelectorAll("strong, b, th, span");
-    
-    labels.forEach(label => {
-      // Find the labels that say Instructor
-      if (label.textContent.includes("Instructor")) {
-        
-        // Look at the text right next to it to see who the professor is
-        const containerText = label.parentElement.textContent;
-        
-        // Check if the professor is on your GSI list
-        const isGSICourse = gsiProfessors.some(prof => containerText.includes(prof));
-        
-        if (isGSICourse) {
-          // 1. Change the text and remove the bolding
-          label.innerHTML = "Graduate Student Instructor for";
-          label.style.fontWeight = "normal";
-          
-          // 2. Catch and delete the colon, even if it's hiding outside the bold tag!
-          let nextNode = label.nextSibling;
-          if (nextNode && nextNode.nodeType === Node.TEXT_NODE) {
-            nextNode.nodeValue = nextNode.nodeValue.replace(/^:\s*/, " ");
-          } else if (label.innerHTML.includes(":")) {
-            label.innerHTML = label.innerHTML.replace(":", "");
-          }
+    // Put the names of your GSI professors here!
+    const gsiProfessors = ["Prof. Example", "David Broockman"];
+
+    // This scans every single piece of raw text on your page
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    const textNodesToUpdate = [];
+
+    while ((node = walk.nextNode())) {
+      gsiProfessors.forEach(prof => {
+        // If it finds the professor's name, queue it up for a change
+        if (node.nodeValue.includes(prof) && !node.nodeValue.includes("Graduate Student Instructor")) {
+          textNodesToUpdate.push({ node: node, prof: prof });
+        }
+      });
+    }
+
+    textNodesToUpdate.forEach(item => {
+      // 1. Swap the professor's name for the full GSI title
+      item.node.nodeValue = item.node.nodeValue.replace(item.prof, "Graduate Student Instructor for " + item.prof);
+
+      // 2. If the word "Instructor:" was in the exact same text block, erase it
+      item.node.nodeValue = item.node.nodeValue.replace(/Instructor:?\s*/i, "");
+
+      let parent = item.node.parentElement;
+      if (parent) {
+        // 3. Force the text to be normal weight (removes the bolding)
+        parent.style.setProperty("font-weight", "normal", "important");
+
+        // 4. If the theme put an "Instructor" label in a separate box right next to the name, hide it!
+        let prev = parent.previousElementSibling;
+        if (prev && prev.textContent.includes("Instructor")) {
+          prev.style.display = "none";
         }
       }
     });
