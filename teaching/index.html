@@ -56,7 +56,7 @@
     textNodesToUpdate.forEach(item => {
       let text = item.node.nodeValue;
 
-      // 1. Remove any stray "Instructor:" text FIRST so we don't delete our own words later!
+      // 1. Remove stray "Instructor:" text so we don't delete our own words
       text = text.replace(/Instructor:?\s*/gi, "");
 
       // 2. Inject the correct title safely
@@ -64,22 +64,37 @@
       item.node.nodeValue = text;
 
       let parent = item.node.parentElement;
+      
+      // 3. Hunt down and destroy any bold <strong> tags sitting right next to the text
+      let prevSib = item.node.previousSibling;
+      if (prevSib && prevSib.nodeType === 1 && prevSib.textContent.toLowerCase().includes("instructor")) {
+        prevSib.style.display = "none";
+      }
+
+      // 4. Hunt down and destroy any separate table headers (<th>) sitting right next to the text
       if (parent) {
-        // Force the main container to be normal, un-bolded text
-        parent.style.setProperty("font-weight", "normal", "important");
-
-        // 3. Hunt down and destroy any bold <strong> tags sitting right next to the text
-        let prevSib = item.node.previousSibling;
-        if (prevSib && prevSib.nodeType === 1 && prevSib.textContent.toLowerCase().includes("instructor")) {
-          prevSib.style.display = "none";
-        }
-
-        // 4. Hunt down and destroy any separate table headers (<th>) sitting right next to the text
         let prevElem = parent.previousElementSibling;
         if (prevElem && prevElem.textContent.toLowerCase().includes("instructor")) {
           prevElem.style.display = "none";
-          prevElem.innerHTML = ""; // Empties the box so it doesn't leave weird bold formatting behind
+          prevElem.innerHTML = "";
         }
+      }
+
+      // 5. THE NUCLEAR OPTION: Climb the HTML tree and aggressively strip all bolding!
+      while (parent && parent !== document.body) {
+        // Force the browser to render this specific element normally
+        parent.style.setProperty("font-weight", "normal", "important");
+        
+        // If the theme is using Bootstrap bold classes, rip them out
+        if (parent.classList) {
+          parent.classList.remove("font-weight-bold", "fw-bold", "bold");
+        }
+        
+        // Stop climbing once we hit a major structural box so we don't break page layout
+        if (['DIV', 'TR', 'P', 'LI', 'TD'].includes(parent.tagName)) {
+          break;
+        }
+        parent = parent.parentElement;
       }
     });
   });
