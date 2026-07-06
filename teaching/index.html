@@ -38,12 +38,36 @@
   kbd, .nav-search-key, .search-key { display: none !important; }
 </style> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/ps-3/">PS 3: Introduction to Empirical Analysis and Quantitative Methods</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">David Broockman</span> </div> <div class="course-description"> <p>This course covers analytical and methodological problems of political inquiry, with an emphasis on quantification and measurement.<br><br> <span onclick="window.location.href=`/assets/pdf/ps-3-syllabus.pdf`; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Syllabus</span> <span onclick="window.location.href=`/assets/pdf/ps-3-section-syllabus.pdf`; event.preventDefault(); event.stopPropagation();" class="course-btn-custom preview-only-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-chart-column-icon lucide-file-chart-column"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M8 18v-1"></path><path d="M12 18v-6"></path><path d="M16 18v-3"></path></svg> Section Syllabus</span></p> </div> </div> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", function() {
-    let tags = document.querySelectorAll("strong, b, th, td, span, div, p");
-    tags.forEach(function(tag) {
-      // Looks for the exact "Instructor:" label on the preview cards
-      if (tag.textContent.trim() === "Instructor:") {
-        tag.innerHTML = "<span style='font-weight: normal !important;'>Graduate Student Instructor for </span>";
-        tag.style.fontWeight = "normal";
+    // 1. Put the names of the professors you GSI'd for in these quotes!
+    // If you add more classes later, just add them to the list separated by commas.
+    const gsiProfessors = ["Prof. Example", "David Broockman"]; 
+    
+    // Find all bold/header tags on the page
+    const labels = document.querySelectorAll("strong, b, th, span");
+    
+    labels.forEach(label => {
+      // Find the labels that say Instructor
+      if (label.textContent.includes("Instructor")) {
+        
+        // Look at the text right next to it to see who the professor is
+        const containerText = label.parentElement.textContent;
+        
+        // Check if the professor is on your GSI list
+        const isGSICourse = gsiProfessors.some(prof => containerText.includes(prof));
+        
+        if (isGSICourse) {
+          // 1. Change the text and remove the bolding
+          label.innerHTML = "Graduate Student Instructor for";
+          label.style.fontWeight = "normal";
+          
+          // 2. Catch and delete the colon, even if it's hiding outside the bold tag!
+          let nextNode = label.nextSibling;
+          if (nextNode && nextNode.nodeType === Node.TEXT_NODE) {
+            nextNode.nodeValue = nextNode.nodeValue.replace(/^:\s*/, " ");
+          } else if (label.innerHTML.includes(":")) {
+            label.innerHTML = label.innerHTML.replace(":", "");
+          }
+        }
       }
     });
   });
