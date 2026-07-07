@@ -8,7 +8,7 @@ middle_name: W.
 last_name: Mikelson
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions.
-keywords: keywords: Maya Mikelson, UC Berkeley, Political Science, Ph.D. student, Interstate Armed Conflict, Human Rights, Government Repression, Quantitative Data Analysis # add your own keywords or leave empty
+keywords: Maya Mikelson, UC Berkeley, Political Science, Ph.D. student, Interstate Armed Conflict, Human Rights, Government Repression, Quantitative Data Analysis # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: "icon.png" # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
