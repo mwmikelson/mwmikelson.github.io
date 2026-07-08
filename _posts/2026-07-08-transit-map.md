@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How reliable are the AC Transit bus routes?"
-date: 2026-07-08 11:41:00
+date: 2026-07-08 14:41:00
 description: Analysis and mapping of delays and cancellation in AC Transit routes over the course of 2024.
 tags: transit mapping leaflet
 categories: data-visualization
