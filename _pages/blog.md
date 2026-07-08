@@ -32,9 +32,9 @@ pagination:
     margin-top: 2px !important; 
   }
 
-  /* Tame huge RSS images specifically on the main blog feed */
-  .post-list img:not(.card-img) {
-    max-width: 250px !important; 
+  /* Tame huge RSS images and float them at the top right */
+  .post-list img.rss-float {
+    max-width: 280px !important; /* Increased size! Change this number if you want them bigger/smaller */
     height: auto !important;     
     float: right !important;                
     margin: 5px 0 15px 25px !important; 
@@ -47,7 +47,31 @@ pagination:
     display: table;
     clear: both;
   }
+  
+  /* Give the external link icon a tiny bit of breathing room from the title */
+  .post-title + svg {
+    margin-left: 5px;
+    vertical-align: middle;
+  }
 </style>
+
+<script>
+  // Move RSS images to the very top of the post so the Title wraps around them!
+  document.addEventListener("DOMContentLoaded", function() {
+    const listItems = document.querySelectorAll(".post-list li");
+    
+    listItems.forEach(li => {
+      // Find the RSS image hiding down in the description text
+      const img = li.querySelector("img:not(.card-img)");
+      if (img) {
+        // Tag it with our new CSS class
+        img.classList.add("rss-float"); 
+        // Physically move the image to the very top of the item before the <h3> title
+        li.insertBefore(img, li.firstChild); 
+      }
+    });
+  });
+</script>
 
 <div class="post">
 
