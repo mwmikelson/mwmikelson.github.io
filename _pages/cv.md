@@ -241,7 +241,7 @@ toc:
     </div>
     <div class="cv-sub">B.S. with High Honors in Political Science, minor in Data Science</div>
     <ul>
-      <li>GPA: 3.64 (3.97 in Political Science)</li>
+      <li>Senior Honors Thesis: <a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" class="cv-link">Measuring Militarization and the Link with Interstate Conflict</a> (Spring 2025)</li>
     </ul>
   </div>
 </div>
