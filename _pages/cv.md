@@ -350,7 +350,7 @@ toc:
       <div class="cv-employer">The Michigan Daily</div>
       <div class="cv-date">2022 – 2025</div>
     </div>
-    <div class="cv-job-title">Data Editor & Data Journalist</div>
+    <div class="cv-job-title"><a href="https://www.michigandaily.com/author/mikelson/" target="_blank" class="cv-link">Data Editor & Data Journalist</a></div>
     <ul>
       <li>Researched, wrote, and edited data journalism stories and visuals.</li>
       <li>Led collaboration with other sections of the Daily to produce articles.</li>
