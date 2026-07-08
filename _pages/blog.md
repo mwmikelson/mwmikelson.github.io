@@ -31,6 +31,27 @@ pagination:
     color: var(--global-text-color) !important; /* Restores its proper color */
     margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
   }
+
+  /* Tame huge RSS images and float them like news thumbnails */
+  .post-content img, 
+  .news img, 
+  article img {
+    max-width: 250px !important; /* Shrinks the image down */
+    height: auto !important;     /* Keeps the proportions correct */
+    float: right;                /* Pushes it to the right side */
+    margin: 5px 0 15px 25px !important; /* Adds breathing room so text doesn't touch it */
+    border-radius: 6px;          /* Optional: Gives the image slightly rounded, modern corners */
+  }
+
+  /* Clear the float after the post so things don't overlap */
+  .post-content::after,
+  .news::after,
+  article::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
 </style>
 
 <div class="post">
