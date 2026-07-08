@@ -19,4 +19,6 @@ I was catsitting for a friend recently which meant taking bus routes I typically
   loading="lazy">
 </iframe>
 
-The data comes from the <a href="https://opendata.actransit.org/organization/ac-transit" target="_blank" class="cv-link">AC Transit Open Data Portal</a>. The data for delayed busses extends from 2021 to the first half of 2025 and the data on cancelled busses extends from 2022 to the first half of 2025. It comes in both annual and monthly data, however, I used annual.
+The data comes from the <a href="https://opendata.actransit.org/organization/ac-transit" target="_blank" class="link">AC Transit Open Data Portal</a>. The data for delayed busses extends from 2021 to the first half of 2025 and the data on cancelled busses extends from 2022 to the first half of 2025. It comes in both annual and monthly data, however, I used annual.
+
+It does appear the 27 bus was established after the data ends. Looking at the Wayback Machine archive from <a href="https://web.archive.org/web/20250627065344/https://www.actransit.org/maps-schedules" target="_blank" class="link">June 27, 2025</a> and <a href="https://web.archive.org/web/20250701174355/https://www.actransit.org/maps-schedules" target="_blank" class="link">July 1, 2025</a>, the 27 bus is not listed as one of the routes operated. The archived page from <a href="https://web.archive.org/web/20250801115451/https://www.actransit.org/maps-schedules" target="_blank" class="link">August 1, 2025</a> does list the 27 route.
