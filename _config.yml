@@ -158,12 +158,6 @@ external_sources:
     rss_url: https://www.michigandaily.com/author/mikelson/rss/
     categories: [external-posts]
     tags: [external-publication]
-  - name: The Michigan Daily
-    posts:
-      - url: https://www.michigandaily.com/author/mikelson/
-        published_date: 2024-11-5
-    categories: [external-publication]
-    tags: [MichiganDaily]
 
 # -----------------------------------------------------------------------------
 # Newsletter
