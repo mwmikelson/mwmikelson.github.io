@@ -116,7 +116,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name:  # blog_name will be displayed in your blog page
+blog_name: Data Projects # blog_name will be displayed in your blog page
 blog_description: Answering questions I have with data.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
@@ -126,7 +126,7 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -146,7 +146,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: Data Projects # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
