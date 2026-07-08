@@ -17,41 +17,36 @@ pagination:
 ---
 
 <style>
-  /* 5. The INSTANT CMD K Killer and Alignment Fix */
+  /* The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
-    font-size: 0 !important; /* Shrinks the text exactly to 0 pixels */
-    color: transparent !important; /* Makes it completely invisible */
+    font-size: 0 !important; 
+    color: transparent !important; 
     display: inline-flex !important; 
-    align-items: center !important; /* Forces perfect vertical alignment */
+    align-items: center !important; 
   }
   
   #search-toggle i, 
   #search-toggle svg {
-    font-size: 1.25rem !important; /* Blows the magnifying glass back up to normal size */
-    color: var(--global-text-color) !important; /* Restores its proper color */
-    margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
+    font-size: 1.25rem !important; 
+    color: var(--global-text-color) !important; 
+    margin-top: 2px !important; 
   }
 
-  /* Tame huge RSS images and float them like news thumbnails */
-  .post-content img, 
-  .news img, 
-  article img {
-    max-width: 250px !important; /* Shrinks the image down */
-    height: auto !important;     /* Keeps the proportions correct */
-    float: right;                /* Pushes it to the right side */
-    margin: 5px 0 15px 25px !important; /* Adds breathing room so text doesn't touch it */
-    border-radius: 6px;          /* Optional: Gives the image slightly rounded, modern corners */
+  /* Tame huge RSS images specifically on the main blog feed */
+  .post-list img:not(.card-img) {
+    max-width: 250px !important; 
+    height: auto !important;     
+    float: right !important;                
+    margin: 5px 0 15px 25px !important; 
+    border-radius: 6px !important;          
   }
 
-  /* Clear the float after the post so things don't overlap */
-  .post-content::after,
-  .news::after,
-  article::after {
+  /* Clear the float after each post so the text and images don't bleed into the next article */
+  .post-list li::after {
     content: "";
     display: table;
     clear: both;
   }
-</style>
 </style>
 
 <div class="post">
