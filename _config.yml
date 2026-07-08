@@ -116,8 +116,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name:  # blog_name will be displayed in your blog page
+blog_description: Answering questions I have with data.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -157,7 +157,7 @@ external_sources:
   - name: The Michigan Daily
     rss_url: https://www.michigandaily.com/author/mikelson/rss/
     categories: [external-posts]
-    tags: [external-publication]
+    tags: [external-publication, michigan-daily]
 
 # -----------------------------------------------------------------------------
 # Newsletter
