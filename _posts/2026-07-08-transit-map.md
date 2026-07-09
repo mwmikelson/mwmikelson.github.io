@@ -7,6 +7,8 @@ tags: transit mapping leaflet
 categories: data-visualization
 chart:
   plotly: false
+authors:
+  - name: Maya Mikelson
 ---
 
 <style>
