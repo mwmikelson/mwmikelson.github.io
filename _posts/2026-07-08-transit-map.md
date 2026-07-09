@@ -5,6 +5,7 @@ date: 2026-07-08 14:41:00
 description: Analysis and mapping of delays and cancellation in AC Transit routes over the course of 2024.
 tags: transit mapping leaflet
 categories: data-visualization
+related_posts: false
 chart:
   plotly: false
 authors:
