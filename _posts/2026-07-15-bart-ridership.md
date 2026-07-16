@@ -3,7 +3,7 @@ layout: post
 title: "Why does BART make the majority of riders transfer?"
 date: 2026-07-15 17:32:00
 description: Analysis and mapping of BART ridership data over 2024 and 2025.
-tags: transit mapping leaflet
+tags: transit mapping leaflet bart
 categories: data-visualization
 related_posts: false
 chart:
