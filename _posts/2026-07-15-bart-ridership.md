@@ -90,7 +90,7 @@ filler text. filler text. filler text. filler text. filler text. filler text. fi
 
 <div class="embed-breakout" style="width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden;">
   <iframe 
-    src="/graphics/bart_interactive_ridership2.html"
+    src="/assets/html/bart_interactive_ridership2.html"
     style="width: 100%; height: 750px; border: none; display: block; background: transparent;"
     scrolling="no"
     loading="lazy">
