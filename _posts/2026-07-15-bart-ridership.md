@@ -60,6 +60,16 @@ authors:
   }
 </style>
 
+<div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
+  <iframe 
+    src="/assets/html2/bart_interactive_ridership2.html"
+    style="width: 100% !important; aspect-ratio: 16 / 9; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
+    scrolling="no"
+    loading="lazy">
+  </iframe>
+</div>
+
+
 I recently went to visit my grandma in Iowa City. I intentionally book flights such that I can take BART unless there are extraordinary circumstances (such as when a flight when BART is not running is sufficently cheaper to justify an Uber). After this trip, I took BART back from SFO to Berkeley. I had also taken BART to SFO on the way there. On the way there, I had a redeye booked which meant going to the airport after the Red line stopped running. I had gotten distracted, but managed to look up just in time to realize we had been sitting at MacArthur, the southbound transfer station. I immediately exited and had to wait 15 minutes in the cold for the Yellow line to arrive that I was supposed to transfer to. It is possible I missed the transfer in my distracted state and the Yellow line had already left. However, I used the BART app to look at stations further ahead and it didn't seem like a yellow line was close enough for that to be the case. On the way home, I also arrived after the Red line stopped running so I was forced to take the Yellow line and transfer to the Orange. This time, I paid attention. Once again, we arrived and the signs said an Orange line train is not arriving for 17 minutes. At first I am in disbelief because this should not be possible given the trains run every 20 minutes and it is supposed to be a timed transfer. If we really were only 3 minutes behind, the Orange line should have waited for us. Nonetheless, another Yellow line train bound in the same direction drops off more passengers in that 17 minute wait, and not lined up with the Orange line as it should be. Finally, the Orange line shows up and it is overcrowded because it had 2 trains of passengers from the Yellow line waiting for it. This was after 10pm on a Wednesday evening; it had no reason to be that crowded. There were no Valkyries or Giants fans onboard meaning the end of a game could not expalin the crowd. A lot of people had gotten on at Civic Center, somewhat unusually for that time of day and day of the week, but not substantially more.
 
 Maybe I just had bad luck recently with the timed transfers and maybe this hypothesis is biased in my favor, but my perception of the Yellow line is that it largely goes through the suburbs with people who use BART to commute, whereas the north parts of the Orange/Red line go through Berkeley and areas with more young people who use BART not during commuting hours.
@@ -76,8 +86,7 @@ Here is a graph showing BART ridership for passengers who start or end in San Fr
   </iframe>
 </div>
 
-filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
-filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
+filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
 
 <div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
   <iframe 
@@ -87,6 +96,9 @@ filler text. filler text. filler text. filler text. filler text. filler text. fi
     loading="lazy">
   </iframe>
 </div>
+
+
+
 
 When looking at ridership in both directions, the only time the Yellow Line outpaces the Red Line is during rush hour in the morning, between 5am and 9am. Filtering to look at outbound and inbound ridership separately, the yellow line only outpaces the red line during rush hour in each direction.
 
