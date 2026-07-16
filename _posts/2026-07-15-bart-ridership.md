@@ -88,16 +88,14 @@ Here is a graph showing BART ridership for passengers who start or end in San Fr
 
 filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
 
-<div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
+<div class="embed-breakout" style="background: transparent !important; padding: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
   <iframe 
     src="/assets/html/bart_interactive_ridership2.html"
-    style="width: 100% !important; aspect-ratio: 16 / 9; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
+    style="width: 100% !important; aspect-ratio: 18 / 10; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important; margin: 0 auto !important;"
     scrolling="no"
     loading="lazy">
   </iframe>
 </div>
-
-
 
 
 When looking at ridership in both directions, the only time the Yellow Line outpaces the Red Line is during rush hour in the morning, between 5am and 9am. Filtering to look at outbound and inbound ridership separately, the yellow line only outpaces the red line during rush hour in each direction.
