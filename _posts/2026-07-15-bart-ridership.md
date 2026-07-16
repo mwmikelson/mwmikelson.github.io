@@ -102,7 +102,7 @@ ext. filler text. filler text. filler text. filler text. filler text. filler tex
 <div class="embed-breakout" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; margin: 2rem 0;">
   
   <iframe 
-    src="/graphics/bart_interactive_ridership2.html"
+    src="/assets/html/bart_interactive_ridership2.html"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; background: transparent;"
     scrolling="no"
     loading="lazy">
