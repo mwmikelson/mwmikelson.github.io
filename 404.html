@@ -19,7 +19,26 @@
     color: var(--global-text-color) !important; /* Restores its proper color */
     margin-top: 2px !important; /* Tiny tweak to level it perfectly with the moon/sun icon */
   }
-</style> <p>You will be redirected to the main page within 3 seconds. If not redirected, please go back to the <a href="https://mwmikelson.github.io">home page</a>.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
+</style> <script>
+  // Check if we are inside a smaller embed box (like a graph) instead of the main window
+  if (window.self !== window.top) {
+    
+    // We are in a graph! Erase the header/footer and show a simple error box.
+    document.documentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #f8f9fa; border: 2px dashed #ccc; border-radius: 8px;">
+        <p style="color: #666; font-family: sans-serif; font-weight: bold; margin: 0;">⚠️ Graph data missing or unavailable</p>
+      </div>
+    `;
+
+  } else {
+    
+    // We are on a normal page! Redirect them to the homepage after 3 seconds.
+    setTimeout(function() {
+      window.location.href = "/";
+    }, 3000);
+    
+  }
+</script> <p>You will be redirected to the main page within 3 seconds. If not redirected, please go back to the <a href="https://mwmikelson.github.io">home page</a>.</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Maya W. Mikelson. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
