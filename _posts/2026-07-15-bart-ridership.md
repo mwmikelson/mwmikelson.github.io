@@ -103,7 +103,7 @@ ext. filler text. filler text. filler text. filler text. filler text. filler tex
   
   <iframe 
     src="/assets/html/bart_interactive_ridership2.html"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; background: transparent;"
+    style="position: absolute; top: 0; left: 0; aspect-ratio: 18 / 10; width: 100%; height: 100%; border: none; display: block; background: transparent;"
     scrolling="no"
     loading="lazy">
   </iframe>
