@@ -81,8 +81,8 @@ filler text. filler text. filler text. filler text. filler text. filler text. fi
 
 <div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
   <iframe 
-    src="/assets/html/bart_interactive_ridership2.html"
-    style="width: 100% !important; aspect-ratio: 13 / 8; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
+    src="/graphics/bart_interactive_ridership2.html"
+    style="width: 100% !important; aspect-ratio: 16 / 9; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
     scrolling="no"
     loading="lazy">
   </iframe>
