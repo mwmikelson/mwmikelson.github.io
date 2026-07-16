@@ -35,7 +35,7 @@ Maybe I just had bad luck recently with the timed transfers and maybe this hypot
 
 Here is a graph showing BART ridership for passengers who start or end in San Francisco and start or end along the red or yellow lines beyond the MacArthur station. The brackets denote times when the demand for the Yellow line outpaces demand for the Red line.
 
-<insert graph here >
+<iframe src="/assets/html/bart_interactive_ridership.html"></iframe>
 
 When looking at ridership in both directions, the only time the Yellow Line outpaces the Red Line is during rush hour in the morning, between 5am and 9am. Filtering to look at outbound and inbound ridership separately, the yellow line only outpaces the red line during rush hour in each direction.
 
@@ -43,7 +43,7 @@ Even when the red line stops running after 9pm, in both directions, ridership to
 
 A slightly less compelling but more interesting graphic to make this argument is the map of BART ridership below. Thicker lines represent segments with higher ridership and bigger circles represent stations that have more exiting passengers. Hovering over a specific segment of track shows what percentage of riders boarded in different regions of the Bay Area.  
 
-<insert map here >
+<iframe src="/assets/html/bart_track_flow_map_avg_hourly.html"></iframe>
 
 Because the BART data does not indicate which line passengers took and only includes information on entry and exit station, it is unclear which BART lines were used to get between destinations. For the first graph comparing demand between segments of the East Bay, this is not a huge hindrance because we can infer what lines people would be willing to take based on whichever of their origin or destinations are in the East Bay. More information about which lines were taken would be useful for evaluating if individuals have a strong preference for direct trains over transfers, which would tell us more precisely how many riders would benefit from the Red line operating over the Yellow line after 9pm. However, when evaluating traffic patterns on BART more broadly, many times there are several lines or combination of lines that could be used by a particular rider to get between two stations. 
 
