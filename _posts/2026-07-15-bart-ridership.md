@@ -97,6 +97,19 @@ filler text. filler text. filler text. filler text. filler text. filler text. fi
   </iframe>
 </div>
 
+ext. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
+
+<div class="embed-breakout" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden; margin: 2rem 0;">
+  
+  <iframe 
+    src="/graphics/bart_interactive_ridership2.html"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; background: transparent;"
+    scrolling="no"
+    loading="lazy">
+  </iframe>
+
+</div>
+
 
 When looking at ridership in both directions, the only time the Yellow Line outpaces the Red Line is during rush hour in the morning, between 5am and 9am. Filtering to look at outbound and inbound ridership separately, the yellow line only outpaces the red line during rush hour in each direction.
 
