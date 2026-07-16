@@ -79,11 +79,10 @@ Here is a graph showing BART ridership for passengers who start or end in San Fr
 filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
 filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
 
-
-<div class="embed-breakout">
+<div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
   <iframe 
     src="/assets/html/bart_interactive_ridership2.html"
-    style="width: 100%; aspect-ratio: 13 / 8; border: none; display: block; background: transparent;"
+    style="width: 100% !important; aspect-ratio: 13 / 8; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
     scrolling="no"
     loading="lazy">
   </iframe>
