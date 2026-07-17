@@ -76,29 +76,6 @@ Maybe I just had bad luck recently with the timed transfers and maybe this hypot
 
 Here is a graph showing BART ridership for passengers who start or end in San Francisco and start or end along the red or yellow lines beyond the MacArthur station. The brackets denote times when the demand for the Yellow line outpaces demand for the Red line.
 
-<div class="embed-breakout">
-  <iframe 
-    src="/assets/html/bart_interactive_ridership.html"
-    class="clean-iframe"
-    height="420px" 
-    scrolling="no"
-    loading="lazy">
-  </iframe>
-</div>
-
-filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
-
-<div class="embed-breakout" style="width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden;">
-  <iframe 
-    src="/assets/html/bart_interactive_ridership2.html"
-    style="width: 100%; height: 750px; border: none; display: block; background: transparent;"
-    scrolling="no"
-    loading="lazy">
-  </iframe>
-</div>
-
-ext. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. filler text. 
-
 <div class="embed-breakout" style="position: relative; width: 100%; height: 0; padding-bottom: 55.5556%; overflow: hidden; margin: 2rem 0;">
   <iframe 
     src="/assets/html/bart_interactive_ridership2.html"
