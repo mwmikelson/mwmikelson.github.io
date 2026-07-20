@@ -12,6 +12,8 @@ authors:
   - name: Maya Mikelson
 ---
 
+<script src="/assets/js/graph-fallback.js"></script>
+
 <style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
@@ -63,6 +65,7 @@ authors:
 <div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
   <iframe 
     src="/assets/html2/bart_interactive_ridership2.html"
+    onload="checkGraphLoad(this)"
     style="width: 100% !important; aspect-ratio: 16 / 9; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
     scrolling="no"
     loading="lazy">
@@ -79,6 +82,7 @@ Here is a graph showing BART ridership for passengers who start or end in San Fr
 <div class="embed-breakout" style="position: relative; width: 100%; height: 0; padding-bottom: 55.5556%; overflow: hidden; margin: 2rem 0;">
   <iframe 
     src="/assets/html/bart_interactive_ridership2.html"
+    onload="checkGraphLoad(this)"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; background: transparent;"
     scrolling="no"
     loading="lazy">
@@ -95,6 +99,7 @@ A slightly less compelling but more interesting graphic to make this argument is
 <div class="embed-breakout">
   <iframe 
     src="/assets/html/bart_track_flow_map_avg_hourly.html"
+    onload="checkGraphLoad(this)"
     class="clean-iframe"
     height="550px" 
     scrolling="no"
