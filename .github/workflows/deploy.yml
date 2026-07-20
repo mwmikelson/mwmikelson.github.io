@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - main
-      - old-version
     paths:
       - "assets/**"
       - "**.bib"
@@ -33,7 +32,6 @@ on:
     branches:
       - master
       - main
-      - old-version
     paths:
       - "assets/**"
       - "**.bib"
