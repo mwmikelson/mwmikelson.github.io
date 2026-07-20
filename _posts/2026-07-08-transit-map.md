@@ -33,13 +33,15 @@ I was cat-sitting for a friend recently, which meant taking bus routes I do not 
 
 The map below lets you explore the cancellation and delay rates of each route by hovering over a route or searching for it.
 
-<iframe 
-  src="/assets/html/transit_map.html" 
-  width="100%" 
-  height="550px" 
-  style="border: 1px solid #e0e0e0; border-radius: 6px;"
-  loading="lazy">
-</iframe>
+<div class="embed-breakout" style="width: 100%; margin: 2rem 0;">
+  <iframe 
+    src="/assets/html/transit_map.html" 
+    onload="checkGraphLoad(this)"
+    style="opacity:0; transition:opacity 0.15s ease-in; width: 100%; height: 550px; border: none; display: block; background: transparent; overflow: visible;"
+    scrolling="no"
+    loading="lazy">
+  </iframe>
+</div>
 
 The data comes from the <a href="https://opendata.actransit.org/organization/ac-transit" target="_blank" class="link">AC Transit Open Data Portal</a>. The data for delayed buses extends from 2021 to the first half of 2025 and the data on cancelled buses extends from 2022 to the first half of 2025. Although newer data exists, 2024 is the last available complete calendar year. The dataset included both annual and monthly levels of aggregation; I used the annual data.
 
