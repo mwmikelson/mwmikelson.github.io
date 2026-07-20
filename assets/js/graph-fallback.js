@@ -4,6 +4,10 @@ function checkGraphLoad(iframe) {
     var title = doc.title || "";
     // Same-origin 404 page has "Page not found" as its title (see 404.md)
     if (title.indexOf("Page not found") !== -1) {
+      // Immediately halt any pending redirect/navigation inside the iframe,
+      // in case the theme's own redirect mechanism is still active
+      try { iframe.contentWindow.stop(); } catch (e2) {}
+
       var wrapper = iframe.parentElement;
 
       // Strip the graph's wide "breakout" styling/class so the error box
