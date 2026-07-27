@@ -62,16 +62,6 @@ authors:
   }
 </style>
 
-<div class="embed-breakout" style="background: transparent !important; padding: 0 !important; border: none !important; box-shadow: none !important; max-width: 100% !important; overflow: visible !important;">
-  <iframe 
-    src="/assets/html2/bart_interactive_ridership2.html"
-    onload="checkGraphLoad(this)"
-    style="width: 100% !important; aspect-ratio: 16 / 9; border: none !important; display: block !important; background: transparent !important; overflow: visible !important; border-radius: 0 !important;"
-    scrolling="no"
-    loading="lazy">
-  </iframe>
-</div>
-
 I recently went to visit my grandma in Iowa City. I intentionally book flights so that I can take BART unless there are extraordinary circumstances (such as a flight when BART is not running is sufficiently cheaper to justify an Uber). After this trip, I took BART back from SFO to Berkeley. I also took BART to SFO on the way there.
 
 On the way there, I had a red-eye booked, which meant going to the airport after the Red Line stopped running. I was distracted, but managed to look up just in time to realize we had been sitting at MacArthur, the southbound transfer station. I immediately exited and had to wait 15 minutes in the cold for the Yellow Line to arrive, which I was supposed to transfer to. It is possible I missed the transfer while I was distracted, and the Yellow Line had already left. However, I used the BART app to look at stations further ahead, and it didn't seem like a Yellow Line was close enough for that to be the case.
