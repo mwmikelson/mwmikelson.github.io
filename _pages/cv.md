@@ -312,7 +312,9 @@ toc:
 
   <div class="cv-item">
     <div class="cv-row">
-      <div class="cv-title">"Peacekeeping, Conflict, Government Repression, and Human Rights"</div>
+      <div class="cv-title">
+        <a href="/assets/pdf/peacekeeping_human_rights_paper.pdf" target="_blank" rel="noopener noreferrer">"Peacekeeping, Conflict, Government Repression, and Human Rights"</div>
+        </a>
       <div class="cv-date"></div>
     </div>
     <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
