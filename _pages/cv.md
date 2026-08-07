@@ -210,11 +210,33 @@ toc:
   }
 
   /* Clean interactive links for items */
+  /* Clean interactive links for items with responsive dark/light underline colors */
   .cv-link {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: rgba(128, 128, 128, 0.4);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #CFCFCF; /* Default Light Mode underline */
   }
+
+  /* System Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .cv-link {
+      text-decoration-color: #49494A;
+    }
+  }
+
+  /* Jekyll / al-folio theme attribute & class toggles */
+  html[data-theme="dark"] .cv-link,
+  body.dark .cv-link {
+    text-decoration-color: #49494A;
+  }
+
+  html[data-theme="light"] .cv-link,
+  body.light .cv-link {
+    text-decoration-color: #CFCFCF;
+  }
+
   .cv-link:hover {
     color: var(--global-theme-color);
     text-decoration-color: var(--global-theme-color);
@@ -301,8 +323,8 @@ toc:
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">
-        <a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-color: #8b949e; text-decoration-thickness: 1px; text-underline-offset: 3px;">"Measuring Militarization and the Link with Interstate Conflict"
-        </a></div>
+        <a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">"Measuring Militarization and the Link with Interstate Conflict"</a>
+      </div>
       <div class="cv-date"></div>
     </div>
     <div class="cv-sub">Senior Honors Thesis, University of Michigan, Spring 2025</div>
@@ -314,19 +336,17 @@ toc:
 
 
   <div class="cv-item">
-  <div class="cv-row">
-    <div class="cv-title">
-      <a href="/assets/pdf/peacekeeping_human_rights_paper.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-color: #8b949e; text-decoration-thickness: 1px; text-underline-offset: 3px;">
-        "Peacekeeping, Conflict, Government Repression, and Human Rights"
-      </a>
+    <div class="cv-row">
+      <div class="cv-title">
+        <a href="/assets/pdf/peacekeeping_human_rights_paper.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">"Peacekeeping, Conflict, Government Repression, and Human Rights"</a>
+      </div>
+      <div class="cv-date"></div>
     </div>
-    <div class="cv-date"></div>
+    <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
+    <ul>
+      <li>Poster presentation at the American Political Science Association Conference, September 2026</li>
+    </ul>
   </div>
-  <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
-  <ul>
-    <li>Poster presentation at the American Political Science Association Conference, September 2026</li>
-  </ul>
-</div>
 
   <div class="cv-item">
     <div class="cv-row">
