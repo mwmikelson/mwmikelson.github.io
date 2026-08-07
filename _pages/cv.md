@@ -300,7 +300,8 @@ toc:
 <div class="cv-card">
   <div class="cv-item">
     <div class="cv-row">
-      <div class="cv-title">"Measuring Militarization and the Link with Interstate Conflict"</div>
+      <div class="cv-title"><a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" rel="noopener noreferrer">"Measuring Militarization and the Link with Interstate Conflict"</div>
+        </a>
       <div class="cv-date"></div>
     </div>
     <div class="cv-sub">Senior Honors Thesis, University of Michigan, Spring 2025</div>
