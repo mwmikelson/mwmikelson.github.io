@@ -312,10 +312,13 @@ toc:
 
   <div class="cv-item">
     <div class="cv-row">
-      <div class="cv-title">"Third-Party Military Interventions, Government Repression, and Human Rights"</div>
+      <div class="cv-title">"Peacekeeping, Conflict, Government Repression, and Human Rights"</div>
       <div class="cv-date"></div>
     </div>
     <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
+    <ul>
+      <li>Poster presentation at the American Political Science Association Conference, September 2026</li>
+    </ul>
   </div>
 
   <div class="cv-item">
