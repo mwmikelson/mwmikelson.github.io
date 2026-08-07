@@ -301,7 +301,7 @@ toc:
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">
-        <a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" rel="noopener noreferrer">"Measuring Militarization and the Link with Interstate Conflict"
+        <a href="https://lsa.umich.edu/content/dam/polisci-assets/Docs/honors-thesis-archive/Mikelson,%20Maya.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;">"Measuring Militarization and the Link with Interstate Conflict"
         </a></div>
       <div class="cv-date"></div>
     </div>
@@ -311,19 +311,22 @@ toc:
       <li>Poster presentation at the American Political Science Association Conference, September 2025</li>
     </ul>
   </div>
-  
+
+
   <div class="cv-item">
-    <div class="cv-row">
-      <div class="cv-title">
-        <a href="/assets/pdf/peacekeeping_human_rights_paper.pdf" target="_blank" rel="noopener noreferrer">"Peacekeeping, Conflict, Government Repression, and Human Rights"
-        </a></div>
-      <div class="cv-date"></div>
+  <div class="cv-row">
+    <div class="cv-title">
+      <a href="/assets/pdf/peacekeeping_human_rights_paper.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;">
+        "Peacekeeping, Conflict, Government Repression, and Human Rights"
+      </a>
     </div>
-    <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
-    <ul>
-      <li>Poster presentation at the American Political Science Association Conference, September 2026</li>
-    </ul>
+    <div class="cv-date"></div>
   </div>
+  <div class="cv-sub">Ralph Bunche Summer Institute Paper, June 2024</div>
+  <ul>
+    <li>Poster presentation at the American Political Science Association Conference, September 2026</li>
+  </ul>
+</div>
 
   <div class="cv-item">
     <div class="cv-row">
