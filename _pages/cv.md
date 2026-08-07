@@ -309,7 +309,7 @@ toc:
       <li>Poster presentation at the American Political Science Association Conference, September 2025</li>
     </ul>
   </div>
-
+  
   <div class="cv-item">
     <div class="cv-row">
       <div class="cv-title">
