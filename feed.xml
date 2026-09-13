@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T02:14:52+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T02:21:19+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping my travel history</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping my travel history"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
     font-size: 0 !important;
@@ -28,7 +28,7 @@
   
   /* The scrolling container */
   .scrollable-list {
-    max-height: 500px; /* Match this to your globe height */
+    max-height: 600px; /* Match this to your globe height */
     overflow-y: auto;
     padding-right: 15px; 
   }
@@ -73,7 +73,7 @@
     border-top: 1px solid var(--global-divider-color, #444);
     margin: 1rem 0;
   }
-</style> <div class="travel-layout"> <div class="globe-column"> <iframe src="/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe> </div> <div class="list-column scrollable-list" id="travel-list-container"> </div> </div> <script>
+</style> <p>This map shows the places I have travelled. You can toggle between the flights I have taken and countries/cities I have been to. Both are complete to the best of my ability. Flights are fully accurate from 2019 to the present but it was somewhat hard to find records of flights I took prior to 2018, especially when it got farther back. What qualified as a city I had been to differed somewhat. I do not count landing at an airport if I did not intend for the city that airport is in was not my final destination. I also did not count layovers less than 8 hours as having been to a city. If I spent more than 8 hours on a layover, I am assuming I left the airport. This may not always be the case but I did not want to sort through the hundreds of flights I have been on to figure it out.</p> <div class="travel-layout"> <div class="globe-column"> <iframe src="/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe> </div> <div class="list-column scrollable-list" id="travel-list-container"> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Fetch the JSON file
     fetch("/assets/json/travel_by_year.json")
@@ -114,7 +114,7 @@
         document.getElementById("travel-list-container").innerHTML = "<p>Unable to load travel data.</p>";
       });
   });
-</script>]]></content><author><name>Maya Mikelson</name></author><category term="data-visualization"/><category term="travel"/><category term="flights"/><category term="mapping"/><summary type="html"><![CDATA[Places visited.]]></summary></entry><entry><title type="html">Why does BART prioritize the Yellow Line despite higher demand for the Red Line?</title><link href="https://mwmikelson.github.io/data-projects/2026/bart-ridership/" rel="alternate" type="text/html" title="Why does BART prioritize the Yellow Line despite higher demand for the Red Line?"/><published>2026-07-15T17:32:00+00:00</published><updated>2026-07-15T17:32:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/bart-ridership</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/bart-ridership/"><![CDATA[<script src="/assets/js/graph-fallback.js"></script> <style>
+</script>]]></content><author><name>Maya Mikelson</name></author><category term="data-visualization"/><category term="travel"/><category term="flights"/><category term="mapping"/><summary type="html"><![CDATA[I mapped the cities, airports and countries I have visited.]]></summary></entry><entry><title type="html">Why does BART prioritize the Yellow Line despite higher demand for the Red Line?</title><link href="https://mwmikelson.github.io/data-projects/2026/bart-ridership/" rel="alternate" type="text/html" title="Why does BART prioritize the Yellow Line despite higher demand for the Red Line?"/><published>2026-07-15T17:32:00+00:00</published><updated>2026-07-15T17:32:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/bart-ridership</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/bart-ridership/"><![CDATA[<script src="/assets/js/graph-fallback.js"></script> <style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
     font-size: 0 !important;
