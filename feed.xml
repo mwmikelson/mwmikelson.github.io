@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T00:31:26+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T00:37:14+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
     font-size: 0 !important;
@@ -33,47 +33,56 @@
     padding-right: 15px; 
   }
 
-  /* Globe iframe styling */
+
+  /* 1. Break out of the narrow post margins */
+  main .container, .post {
+    max-width: 1200px !important; 
+  }
+
+  /* 3. Globe iframe styling */
   .globe-iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border: none;
-    border-radius: 8px; /* Optional: rounds the corners slightly */
+    border-radius: 8px;
+    background-color: transparent; /* Helps if the iframe is rendering a white box in dark mode */
   }
-</style> <div class="row"> <div class="col-sm-6"> <iframe src="/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe> </div> <div class="col-sm-6 scrollable-list" id="travel-list-container"> </div> </div> <script>
+
+
+  .year-divider {
+    border-top: 1px solid var(--global-divider-color, #444);
+    margin: 1rem 0;
+  }
+</style> <div class="travel-layout"> <div class="globe-column"> <iframe src="/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe> </div> <div class="list-column scrollable-list" id="travel-list-container"> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Fetch the JSON file from the assets folder
+    // Fetch the JSON file
     fetch("/assets/json/travel_by_year.json")
       .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!response.ok) throw new Error("Network response was not ok");
         return response.json();
       })
       .then(data => {
         const container = document.getElementById("travel-list-container");
         
-        // 2. Reverse the data so the most recent year (2026) is at the top
+        // Reverse the data so the most recent year is at the top
         const reversedData = data.reverse();
 
-        // 3. Loop through the data and build the HTML
+        // Loop through the data and build the HTML
         reversedData.forEach((item, index) => {
-          // Check if countries is an array or a single string, and format accordingly
           const countriesText = Array.isArray(item.countries) 
             ? item.countries.join(", ") 
             : item.countries;
 
-          // Create the HTML structure for each year
           let htmlBlock = `
-            <div class="mb-4">
+            <div>
               <h5 class="travel-year-heading">${item.Year}</h5>
               <div class="travel-countries-list">${countriesText}</div>
             </div>
           `;
 
-          // Add a divider line between years, except for the very last one
+          // Add a divider line between years
           if (index < reversedData.length - 1) {
-            htmlBlock += `<hr>`;
+            htmlBlock += `<hr class="year-divider">`;
           }
 
           // Inject into the page
