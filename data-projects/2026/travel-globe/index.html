@@ -72,7 +72,13 @@
     height: 600px;
     border: none;
     border-radius: 8px;
-    background-color: transparent; /* Helps if the iframe is rendering a white box in dark mode */
+    /* Matches the site's own background so the empty space around the globe
+       (which is transparent inside the iframe's own document) shows the
+       right color in both light and dark mode -- no JS/cross-frame theme
+       detection needed, this just follows your theme's own CSS variable.
+       If your theme uses a different variable name for the page background,
+       swap it in here. */
+    background-color: var(--global-bg-color, transparent);
   }
 
   .year-divider {
