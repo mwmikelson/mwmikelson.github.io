@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T00:10:13+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Why does BART prioritize the Yellow Line despite higher demand for the Red Line?</title><link href="https://mwmikelson.github.io/data-projects/2026/bart-ridership/" rel="alternate" type="text/html" title="Why does BART prioritize the Yellow Line despite higher demand for the Red Line?"/><published>2026-07-15T17:32:00+00:00</published><updated>2026-07-15T17:32:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/bart-ridership</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/bart-ridership/"><![CDATA[<script src="/assets/js/graph-fallback.js"></script> <style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T00:31:26+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
+  /* 5. The INSTANT CMD K Killer and Alignment Fix */
+  #search-toggle {
+    font-size: 0 !important;
+    color: transparent !important;
+    display: inline-flex !important; 
+    align-items: center !important;
+  }
+  
+  #search-toggle i, 
+  #search-toggle svg {
+    font-size: 1.25rem !important;
+    color: var(--global-text-color) !important;
+    margin-top: 2px !important;
+  }
+
+  /* Custom styling for the travel list */
+  .travel-year-heading {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .travel-countries-list {
+    font-size: 0.9em;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+  
+  /* The scrolling container */
+  .scrollable-list {
+    max-height: 500px; /* Match this to your globe height */
+    overflow-y: auto;
+    padding-right: 15px; 
+  }
+
+  /* Globe iframe styling */
+  .globe-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px; /* Optional: rounds the corners slightly */
+  }
+</style> <div class="row"> <div class="col-sm-6"> <iframe src="/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe> </div> <div class="col-sm-6 scrollable-list" id="travel-list-container"> </div> </div> <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Fetch the JSON file from the assets folder
+    fetch("/assets/json/travel_by_year.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        const container = document.getElementById("travel-list-container");
+        
+        // 2. Reverse the data so the most recent year (2026) is at the top
+        const reversedData = data.reverse();
+
+        // 3. Loop through the data and build the HTML
+        reversedData.forEach((item, index) => {
+          // Check if countries is an array or a single string, and format accordingly
+          const countriesText = Array.isArray(item.countries) 
+            ? item.countries.join(", ") 
+            : item.countries;
+
+          // Create the HTML structure for each year
+          let htmlBlock = `
+            <div class="mb-4">
+              <h5 class="travel-year-heading">${item.Year}</h5>
+              <div class="travel-countries-list">${countriesText}</div>
+            </div>
+          `;
+
+          // Add a divider line between years, except for the very last one
+          if (index < reversedData.length - 1) {
+            htmlBlock += `<hr>`;
+          }
+
+          // Inject into the page
+          container.innerHTML += htmlBlock;
+        });
+      })
+      .catch(error => {
+        console.error("Error loading travel data:", error);
+        document.getElementById("travel-list-container").innerHTML = "<p>Unable to load travel data.</p>";
+      });
+  });
+</script>]]></content><author><name>Maya Mikelson</name></author><category term="data-visualization"/><category term="travel"/><category term="flights"/><category term="mapping"/><summary type="html"><![CDATA[Places visited.]]></summary></entry><entry><title type="html">Why does BART prioritize the Yellow Line despite higher demand for the Red Line?</title><link href="https://mwmikelson.github.io/data-projects/2026/bart-ridership/" rel="alternate" type="text/html" title="Why does BART prioritize the Yellow Line despite higher demand for the Red Line?"/><published>2026-07-15T17:32:00+00:00</published><updated>2026-07-15T17:32:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/bart-ridership</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/bart-ridership/"><![CDATA[<script src="/assets/js/graph-fallback.js"></script> <style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
     font-size: 0 !important;
