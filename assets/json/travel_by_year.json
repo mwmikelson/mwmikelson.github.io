@@ -48,10 +48,6 @@
     "countries": "Mexico"
   },
   {
-    "Year": 2020,
-    "countries": "Mexico"
-  },
-  {
     "Year": 2021,
     "countries": ["France", "Greece", "Mexico", "The Netherlands"]
   },
