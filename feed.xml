@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T00:57:29+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mwmikelson.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mwmikelson.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-13T01:02:18+00:00</updated><id>https://mwmikelson.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Maya Mikelson, a Ph.D. Student in Political Science at UC Berkeley. Research interests include intrastate and interstate conflict, repression, public opinion and third-party military interventions. </subtitle><entry><title type="html">Mapping My Travel History</title><link href="https://mwmikelson.github.io/data-projects/2026/travel-globe/" rel="alternate" type="text/html" title="Mapping My Travel History"/><published>2026-09-12T17:41:00+00:00</published><updated>2026-09-12T17:41:00+00:00</updated><id>https://mwmikelson.github.io/data-projects/2026/travel-globe</id><content type="html" xml:base="https://mwmikelson.github.io/data-projects/2026/travel-globe/"><![CDATA[<style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
     font-size: 0 !important;
@@ -39,6 +39,27 @@
     max-width: 1200px !important; 
   }
 
+/* --- NEW: The missing Flexbox rules to force side-by-side --- */
+  .travel-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 1.5rem;
+  }
+  
+  /* On screens larger than an iPad, put them side-by-side */
+  @media (min-width: 768px) {
+    .travel-layout {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .globe-column {
+      flex: 1.2; /* Gives the globe slightly more width */
+    }
+    .list-column {
+      flex: 0.8; /* Gives the list slightly less width */
+    }
+  }
   /* 3. Globe iframe styling */
   .globe-iframe {
     width: 100%;

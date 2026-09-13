@@ -45,6 +45,27 @@
     max-width: 1200px !important; 
   }
 
+/* --- NEW: The missing Flexbox rules to force side-by-side --- */
+  .travel-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 1.5rem;
+  }
+  
+  /* On screens larger than an iPad, put them side-by-side */
+  @media (min-width: 768px) {
+    .travel-layout {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .globe-column {
+      flex: 1.2; /* Gives the globe slightly more width */
+    }
+    .list-column {
+      flex: 0.8; /* Gives the list slightly less width */
+    }
+  }
   /* 3. Globe iframe styling */
   .globe-iframe {
     width: 100%;
