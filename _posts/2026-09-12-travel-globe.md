@@ -29,47 +29,62 @@ authors:
     margin-top: 2px !important;
   }
 
-  /* Break out of the narrow post margins for a wider view */
+  /* Custom styling for the travel list */
+  .travel-year-heading {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .travel-countries-list {
+    font-size: 0.9em;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+  
+  /* The scrolling container */
+  .scrollable-list {
+    max-height: 500px; /* Match this to your globe height */
+    overflow-y: auto;
+    padding-right: 15px; 
+  }
+
+
+  /* 1. Break out of the narrow post margins */
   main .container, .post {
     max-width: 1200px !important; 
   }
 
-  /* The scrolling list container */
-  .scrollable-list {
-    max-height: 600px; 
-    overflow-y: auto;
-    padding-right: 20px; 
+  /* 3. Globe iframe styling */
+  .globe-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent; /* Helps if the iframe is rendering a white box in dark mode */
   }
 
-  /* Typography for the list */
-  .travel-year-heading {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    font-size: 1.5rem;
-    color: var(--global-text-color);
-  }
-  .travel-countries-list {
-    font-size: 1rem;
-    color: var(--global-text-color-light);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
   .year-divider {
     border-top: 1px solid var(--global-divider-color, #444);
     margin: 1rem 0;
   }
 </style>
 
-<!-- WARNING: Do not add blank lines between these div tags, or Jekyll will break the grid -->
-<div class="row align-items-center mt-4">
-  <div class="col-md-7">
-    <iframe src="{{ site.baseurl }}/assets/html/travel_globe.html" style="width: 100%; height: 600px; border: none; background-color: transparent;" title="Interactive Travel Globe"></iframe>
+<div class="travel-layout">
+  <!-- LEFT COLUMN: The Globe HTML -->
+  <div class="globe-column">
+    <!-- Using site.baseurl ensures the path is absolute from the root of your site -->
+    <iframe src="{{ site.baseurl }}/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe>
   </div>
-  <div class="col-md-5 scrollable-list" id="travel-list-container"></div>
+
+  <!-- RIGHT COLUMN: The Scrollable Data List -->
+  <div class="list-column scrollable-list" id="travel-list-container">
+    <!-- JavaScript will inject the JSON data here -->
+  </div>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    // Fetch the JSON file
     fetch("{{ site.baseurl }}/assets/json/travel_by_year.json")
       .then(response => {
         if (!response.ok) throw new Error("Network response was not ok");
@@ -77,8 +92,11 @@ authors:
       })
       .then(data => {
         const container = document.getElementById("travel-list-container");
+        
+        // Reverse the data so the most recent year is at the top
         const reversedData = data.reverse();
 
+        // Loop through the data and build the HTML
         reversedData.forEach((item, index) => {
           const countriesText = Array.isArray(item.countries) 
             ? item.countries.join(", ") 
@@ -91,10 +109,12 @@ authors:
             </div>
           `;
 
+          // Add a divider line between years
           if (index < reversedData.length - 1) {
             htmlBlock += `<hr class="year-divider">`;
           }
 
+          // Inject into the page
           container.innerHTML += htmlBlock;
         });
       })
