@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Mapping My Travel History"
+title: "Mapping my travel history"
 date: 2026-09-12 17:41:00
-description: Places visited.
+description: I mapped the cities, airports and countries I have visited.
 tags: travel flights mapping
 categories: data-visualization
 related_posts: false
@@ -43,7 +43,7 @@ authors:
   
   /* The scrolling container */
   .scrollable-list {
-    max-height: 500px; /* Match this to your globe height */
+    max-height: 600px; /* Match this to your globe height */
     overflow-y: auto;
     padding-right: 15px; 
   }
@@ -89,6 +89,9 @@ authors:
     margin: 1rem 0;
   }
 </style>
+
+This map shows the places I have travelled. You can toggle between the flights I have taken and countries/cities I have been to. Both are complete to the best of my ability. Flights are fully accurate from 2019 to the present but it was somewhat hard to find records of flights I took prior to 2018, especially when it got farther back. What qualified as a city I had been to differed somewhat. I do not count landing at an airport if I did not intend for the city that airport is in was not my final destination. I also did not count layovers less than 8 hours as having been to a city. If I spent more than 8 hours on a layover, I am assuming I left the airport. This may not always be the case but I did not want to sort through the hundreds of flights I have been on to figure it out.
+
 
 <div class="travel-layout">
   <!-- LEFT COLUMN: The Globe HTML -->
