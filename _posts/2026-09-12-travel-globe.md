@@ -48,61 +48,71 @@ authors:
     padding-right: 15px; 
   }
 
-  /* Globe iframe styling */
+
+  /* 1. Break out of the narrow post margins */
+  main .container, .post {
+    max-width: 1200px !important; 
+  }
+
+  /* 3. Globe iframe styling */
   .globe-iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border: none;
-    border-radius: 8px; /* Optional: rounds the corners slightly */
+    border-radius: 8px;
+    background-color: transparent; /* Helps if the iframe is rendering a white box in dark mode */
+  }
+
+
+  .year-divider {
+    border-top: 1px solid var(--global-divider-color, #444);
+    margin: 1rem 0;
   }
 </style>
 
-<div class="row">
+<div class="travel-layout">
   <!-- LEFT COLUMN: The Globe HTML -->
-  <div class="col-sm-6">
-    <iframe src="{{ '/assets/html/travel_globe.html' | relative_url }}" class="globe-iframe" title="Interactive Travel Globe"></iframe>
+  <div class="globe-column">
+    <!-- Using site.baseurl ensures the path is absolute from the root of your site -->
+    <iframe src="{{ site.baseurl }}/assets/html/travel_globe.html" class="globe-iframe" title="Interactive Travel Globe"></iframe>
   </div>
 
   <!-- RIGHT COLUMN: The Scrollable Data List -->
-  <div class="col-sm-6 scrollable-list" id="travel-list-container">
+  <div class="list-column scrollable-list" id="travel-list-container">
     <!-- JavaScript will inject the JSON data here -->
   </div>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Fetch the JSON file from the assets folder
-    fetch("{{ '/assets/json/travel_by_year.json' | relative_url }}")
+    // Fetch the JSON file
+    fetch("{{ site.baseurl }}/assets/json/travel_by_year.json")
       .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!response.ok) throw new Error("Network response was not ok");
         return response.json();
       })
       .then(data => {
         const container = document.getElementById("travel-list-container");
         
-        // 2. Reverse the data so the most recent year (2026) is at the top
+        // Reverse the data so the most recent year is at the top
         const reversedData = data.reverse();
 
-        // 3. Loop through the data and build the HTML
+        // Loop through the data and build the HTML
         reversedData.forEach((item, index) => {
-          // Check if countries is an array or a single string, and format accordingly
           const countriesText = Array.isArray(item.countries) 
             ? item.countries.join(", ") 
             : item.countries;
 
-          // Create the HTML structure for each year
           let htmlBlock = `
-            <div class="mb-4">
+            <div>
               <h5 class="travel-year-heading">${item.Year}</h5>
               <div class="travel-countries-list">${countriesText}</div>
             </div>
           `;
 
-          // Add a divider line between years, except for the very last one
+          // Add a divider line between years
           if (index < reversedData.length - 1) {
-            htmlBlock += `<hr>`;
+            htmlBlock += `<hr class="year-divider">`;
           }
 
           // Inject into the page
