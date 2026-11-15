@@ -43,7 +43,7 @@ authors:
   
   /* The scrolling container */
   .scrollable-list {
-    max-height: 600px; /* Match this to your globe height */
+    max-height: 700px; /* Match this to your globe height */
     overflow-y: auto;
     padding-right: 15px; 
   }
@@ -78,7 +78,7 @@ authors:
   /* 3. Globe iframe styling */
   .globe-iframe {
     width: 100%;
-    height: 600px;
+    height: 700px;
     border: none;
     border-radius: 8px;
     /* Matches the site's own background so the empty space around the globe
