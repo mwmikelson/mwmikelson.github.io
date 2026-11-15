@@ -12,6 +12,8 @@ authors:
   - name: Maya Mikelson
 ---
 
+<script src="/assets/js/graph-fallback.js"></script>
+
 <style>
   /* 5. The INSTANT CMD K Killer and Alignment Fix */
   #search-toggle {
